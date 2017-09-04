@@ -1,378 +1,62 @@
+
 <!DOCTYPE html>
-	<html class="sl-root decks export offline loaded">
-	<head>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<title>Basics of Incident Handling: Slides</title>
-		<meta name="description" content="Slides">
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
 
-		<link rel="stylesheet" type="text/css" href="lib/offline-v2.css">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 
+    <title>Slides by MSAdministrator</title>
+  </head>
 
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Presentations</h1>
+        <h2>Windows. PowerShell. Digital Forensics. Phishing</h2>
+        <a href="https://github.com/msadministrator/presentations" class="button"><small>View project on</small>GitHub</a>
+      </div>
+    </header>
 
-	</head>
-	<body class="reveal-viewport theme-font-montserrat theme-color-white-blue">
-		<div class="reveal">
-			<div class="slides">
-				<section data-id="95a7ace7e97079dff1c8608014dbad86"><div class="sl-block" data-block-type="text" style="width: 806px; left: 46px; top: 52px; height: auto;" data-block-id="459a914b575e5ba4715ee9c76ceb591c"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
-<h1 style="text-align:left"><span style="font-size:1.4em">basics</span></h1>
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
 
-<h1 style="text-align:left"><span style="font-size:1.4em">of</span></h1>
-
-<h1 style="text-align:left"><span style="font-size:1.4em">incident</span></h1>
-
-<h1 style="text-align:left"><span style="font-size:1.4em">handling</span></h1>
-</div></div></section><section data-id="ae1380b43b702b4c0990180c66c40242"><div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 192px; height: 192px; left: 23px; top: 70px;" data-block-id="8222e2eb142dd722ee3c1dcf961364b6"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="246" data-natural-height="246" data-lazy-loaded="" data-src="basics-of-incident-handling/57a40ccbc2098d03d4da305e680faafe.png"></div></div>
-<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 192px; height: 192px; left: 258px; top: 70px;" data-block-id="8ac531b6ebb5bd61c9fba589c84ad0e5"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="246" data-natural-height="246" data-lazy-loaded="" data-src="basics-of-incident-handling/45f7fe8e9293043e4e1ac6c2369f9d3d.png"></div></div>
-<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 192px; height: 192px; left: 497px; top: 70px;" data-block-id="fe21c5e5aa130d7ccb39843b69d1eaaa"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="246" data-natural-height="246" data-lazy-loaded="" data-src="basics-of-incident-handling/786a24c8399237ea27ff25f3e399a154.png"></div></div>
-<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 192px; height: 192px; left: 757px; top: 70px;" data-block-id="bab75159a1857ac1d4282cfbc700fc5f"><div class="sl-block-content" style="z-index: 14;"><img style="" data-natural-width="246" data-natural-height="246" data-lazy-loaded="" data-src="basics-of-incident-handling/a77c37b672260b1522624fe9bd2305d6.png"></div></div>
-<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 189px; height: 189px; left: 25px; top: 441px;" data-block-id="e035c3f54d88adec12f038b49ed69203"><div class="sl-block-content" style="z-index: 15;"><img style="" data-natural-width="246" data-natural-height="246" data-lazy-loaded="" data-src="basics-of-incident-handling/9d7bcedcf2a9ff3cf7bdf85f27f6147d.png"></div></div>
-<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 189px; height: 189px; left: 260px; top: 441px;" data-block-id="4cff0ee7025e98044704f4f4f57213c1"><div class="sl-block-content" style="z-index: 16;"><img style="" data-natural-width="246" data-natural-height="246" data-lazy-loaded="" data-src="basics-of-incident-handling/5d2bf3d2cfa1edf6faf97e4747669a76.png"></div></div>
-<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 210px; height: 210px; left: 488px; top: 420px;" data-block-id="c5ea9f1e827ad2701729e4bbc8b00f6c"><div class="sl-block-content" style="z-index: 17;"><img style="" data-natural-width="246" data-natural-height="246" data-lazy-loaded="" data-src="basics-of-incident-handling/e15c1974650ef9a9d79f97432020bf12.png"></div></div>
-<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 210px; height: 210px; left: 748px; top: 420px;" data-block-id="7ff2ce4c1276becf6871e164a9560cc0"><div class="sl-block-content" style="z-index: 18;"><img style="" data-natural-width="246" data-natural-height="246" data-lazy-loaded="" data-src="basics-of-incident-handling/f51b265d9bb7455e2786e3940ead51f0.png"></div></div></section><section data-id="5e5de5b41907603c62baf149ddada81a"><div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 960px; height: 625px; left: 2px; top: 38px;" data-block-id="9e3221be8c5e8cc285cef7eb7e78eb9a"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="2000" data-natural-height="1302" data-lazy-loaded="" data-src="basics-of-incident-handling/6194911e8716303ed57cb2c029945af9.png"></div></div></section><section data-id="f59257d23bee0d3bf10ff638d0312c67"><div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 960px; height: 701px; left: 0px; top: 0px;" data-block-id="592eb3c6981877dd85e07ab2f5d669c8"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1848" data-natural-height="1350" data-lazy-loaded="" data-src="basics-of-incident-handling/28ac81f17f4dcb1e76faa12d6dde0d5a.png"></div></div></section><section data-id="883af2c5231a347815ade86088641094"><div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 960px; height: 504px; left: 0px; top: 98px;" data-block-id="259790696e77de0bc9e5712a4a10bc8c"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="2142" data-natural-height="1125" data-lazy-loaded="" data-src="basics-of-incident-handling/e6c9b44e8252995a2f035a01bbd344d8.png"></div></div></section><section data-id="1c172338d5ec11208f1b7fee019fb1c3"><div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 960px; height: 409px; left: 0px; top: 146px;" data-block-id="979f0c304b50feebd739385f37a52c42"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="2000" data-natural-height="853" data-lazy-loaded="" data-src="basics-of-incident-handling/7ae9826375294ac681380cefe631caef.png"></div></div></section><section data-id="97b4fae4e2cca9d5a13f0280b878e799"><div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 960px; height: 598px; left: 0px; top: 51px;" data-block-id="30790a9311de65bf4d22bbf10aae5c9a"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="2003" data-natural-height="1247" data-lazy-loaded="" data-src="basics-of-incident-handling/cb8ceba89b49ff66292aaea2613d0022.png"></div></div></section><section class="stack" data-id="9ece0b1ffef01f90f27992d2cfbd5414"><section data-id="292e0f218e24fbe71122870d19fd6489"><div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 960px; height: 720px; left: 0px; top: -9px;" data-block-id="7cc7e2b0e30e2b7e71a38fa5e5ba9888"><div class="sl-block-content" style="z-index: 11; transition-duration: 0.6s; transition-delay: 0.6s;" data-animation-type="fade-in"><img style="" data-natural-width="1334" data-natural-height="1000" data-lazy-loaded="" data-src="basics-of-incident-handling/267d5580cdfcd0551bd6e4d20b74c78b.png"></div></div></section><section data-id="f8540c48001551030e1746505e4ed205"><div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 960px; height: 863px; left: 0px; top: -81px;" data-block-id="d5f8d2649be93015b1d2f8a9f0949b2e"><div class="sl-block-style" style="z-index: 11; transform: rotate(35deg);"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1382" data-natural-height="1242" data-lazy-loaded="" data-src="basics-of-incident-handling/b0a869b33b66e2d8fc2a3d442cfe79ea.png"></div></div></div></section><section data-id="7f85bd7d2ea5ddf8a87f32c07c9450bb"><div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 960px; height: 825px; left: 0px; top: -62px;" data-block-id="5999c758880d55b1213c3a91daebe5c8"><div class="sl-block-style" style="z-index: 11; transform: rotate(30deg);"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1571" data-natural-height="1350" data-lazy-loaded="" data-src="basics-of-incident-handling/ccc539c319e9fc341e531123e3d5f7fa.png"></div></div></div></section><section data-id="0dd8f032ec8ba3793262284d10c29157"><div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 960px; height: 384px; left: 0px; top: 158px;" data-block-id="19bc9f4daa8b3a406b85db2f90629437"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1166" data-natural-height="467" data-lazy-loaded="" data-src="basics-of-incident-handling/53363c3bb8b9c5a2102f520273adda95.png"></div></div></section><section data-id="f47bc4cb3bbbf03095b0b7b14a4fa84c"><div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 960px; height: 766px; left: 0px; top: -33px;" data-block-id="c54a702529b208ad15ab8b575f360a47"><div class="sl-block-style" style="z-index: 11; transform: rotate(337deg);"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1693" data-natural-height="1350" data-lazy-loaded="" data-src="basics-of-incident-handling/8c8164541a8d19ea4b0d03e32500e8a6.png"></div></div></div></section></section><section data-id="2936127dc7645ca6074e5483394d7797"><div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 773px; left: 14px; top: 140px;" data-block-id="f24e1245dc2a3627c341293aed0f3e24"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10; transition-duration: 0.6s; transition-delay: 0.6s;" data-has-custom-html="" data-animation-type="slide-left">
-<blockquote>
-<h1 style="font-family:Papyrus;">failing to prepare . . .</h1>
-</blockquote>
-</div></div>
-<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 773px; left: 174px; top: 453px;" data-block-id="a259aa0fd97f4ff1215070537e981e7f"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; transition-duration: 0.6s; transition-delay: 0.6s;" data-has-custom-html="" data-animation-type="slide-right">
-<blockquote>
-<h1 style="font-family:Papyrus;">. . . prepare to fail"</h1>
-</blockquote>
-</div></div></section><section class="stack" data-id="a4baf02fd51f441b7f19b9fd3323d246"><section data-id="a0ce90a33cc2b9efa3bdfc600bacd6fc"><div class="sl-block" data-block-type="text" style="width: 864px; left: 0px; top: 113px; height: auto;" data-block-id="959f3f502114cf0149ed789fff2757ca"><div class="sl-block-content" data-placeholder-tag="h1" style="font-size: 200%; text-align: left; z-index: 10;" data-placeholder-text="Text">
-<h1><span style="font-size:0.9em">preparation</span></h1>
-</div></div></section><section data-id="a1f9e1335191ca2687cf80a382fbb84c"><div class="sl-block" data-block-type="text" style="width: 413px; left: 29px; top: 84px; height: auto;" data-block-id="f0cc223f8c2b5e1ef5bf1a51731cfb90"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 10;">
-<h2>acceptable use policy</h2>
-</div></div>
-<div class="sl-block" data-block-type="text" style="width: 413px; left: 29px; top: 276px; height: auto;" data-block-id="425f784dc28e5dfe9a73069d5a8debba"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec metus justo. Aliquam erat volutpat." style="z-index: 12; text-align: left;">
-<ul>
-	<li>loss of network access</li>
-</ul>
+<h2>
+<a name="current-presentations" class="anchor" href="#current-presentations"><span class="octicon octicon-link"></span></a>Presentations</h2>
 
 <ul>
-	<li>suspension from work</li>
-	<li>possible loss of employment</li>
-	<li>legal action and/or prosecution by the authorities</li>
+<li><a href="http://msadministrator.github.io/presentations/basics-of-incident-handling.html">Basics of Incident Handling</a></li>
+
 </ul>
-</div></div>
-<div class="sl-block" data-block-type="image" style="width: 517px; height: 620px; left: 443px; top: 40px;" data-block-id="1178f916db51f3daff204b70556a77ab"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="800" data-natural-height="960" data-lazy-loaded="" data-src="basics-of-incident-handling/fade8544bb2e176806988cdfa5a52e82.jpg"></div></div></section><section data-id="c4e2a3c6bcd49ed5387277ecebbb0dad"><div class="sl-block" data-block-type="image" style="width: 783px; height: 522px; left: 89px; top: 178px;" data-block-id="e0afd40e42305aa0b4c1c811cea80333"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="940" data-natural-height="627" data-lazy-loaded="" data-src="basics-of-incident-handling/2c96801fa914253729631d45289fc087.jpg"></div></div>
-<div class="sl-block" data-block-type="text" style="width: 828px; left: 66px; top: 33px; height: auto;" data-block-id="ab5f8d3e371c29d93a643fd5614bdac2"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: right; z-index: 14;">
-<h2>data classification system</h2>
-</div></div>
-<div class="sl-block" data-block-type="text" style="width: 523px; left: 219px; top: 121px; height: auto;" data-block-id="93e6788599b89b83219a25031af0a5c5"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec metus justo. Aliquam erat volutpat." style="z-index: 15; text-align: right;">
-<p>where is your most important data?</p>
-</div></div></section><section data-id="239632a2c9297d7878ea9a5cc4e85cb2"><div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 632px; height: 700px; left: 164px; top: 0px;" data-block-id="174532d45740a90416f4a73c66cfeec9"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1016" data-natural-height="1126" data-lazy-loaded="" data-src="basics-of-incident-handling/f564229d0dfe8ecaa4e21f0fd1b159f5.png"></div></div></section><section data-id="6f74f30fdea6886b3cddefc16bb33544"><div class="sl-block" data-block-type="text" style="width: 413px; left: 29px; top: 84px; height: auto;" data-block-id="c55cf84b931c6b34c2a415be13418490"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 10;">
-<h2>cyber insurance</h2>
-</div></div>
-
-<div class="sl-block" data-block-type="image" style="width: 450px; height: 630px; left: 480.5px; top: 35px;" data-block-id="e488cc14b2a3287f3adbb4120ac56088"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="500" data-natural-height="700" data-lazy-loaded="" data-src="basics-of-incident-handling/cdfd7440989c2ff174819540a90fd514.png"></div></div></section><section data-id="e99fbbf0cde1c18a2fbc1259122b40f9"><div class="sl-block" data-block-type="text" style="width: 864px; left: 30px; top: 58px; height: auto;" data-block-id="c51a129fd6ebff407b8d01a8cc31eefe"><div class="sl-block-content" data-placeholder-tag="h1" style="font-size: 200%; text-align: right; z-index: 10;" data-placeholder-text="Text">
-<h3>critical</h3>
-
-<h3>security</h3>
-
-<h3>incident</h3>
-
-<h3>response</h3>
-
-<h3>plan</h3>
-</div></div></section><section data-id="06a543076c8d88760e86f1f58b4b654b"><div class="sl-block" data-block-type="image" style="width: 448px; height: 630px; left: 16.5px; top: 35px;" data-block-id="802ea474ba29302b12b7fd4528b5d6d9"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="454" data-natural-height="639" data-lazy-loaded="" data-src="basics-of-incident-handling/70ffd334775187af356639ce78bfa614.jpg"></div></div>
-<div class="sl-block" data-block-type="text" style="width: 413px; left: 499px; top: 84px; height: auto;" data-block-id="3b953df2dba7cc311bddbcd0857c41e5"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: right; z-index: 14;">
-<h2>CSIRP</h2>
-</div></div>
-<div class="sl-block" data-block-type="text" style="width: 413px; left: 499px; top: 158px; height: auto;" data-block-id="d9b14c45f261405c8471f29116346c69"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec metus justo. Aliquam erat volutpat." style="z-index: 15; text-align: right;" dir="ui">
-<p>definitions/keywords</p>
-
-<p>roles &amp; responsibilities</p>
-
-<p>methodologies</p>
-
-<p>incident response phases</p>
-
-<p>engaging stakeholders</p>
-
-<p>documentation standards</p>
-
-<p>escalation</p>
-</div></div></section><section data-id="aa9c837b59502461e05432ac80d3661c"><div class="sl-block" data-block-type="text" style="width: 413px; left: 29px; top: 84px; height: auto;" data-block-id="08c946ae141ba2463417b2340a0e29f0"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 10;">
-<h1>critical</h1>
-
-<h1>security</h1>
-
-<h1>incident</h1>
-
-<h1>response</h1>
-
-<h1>team</h1>
-</div></div></section><section data-id="7b0acc7a142028229a8432df0aae43d6"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 42px; height: auto;" data-block-id="5481780329b779e5fa80f6f03eb8df0e"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
-<h2>typical organization</h2>
-</div></div>
-<div class="sl-block" data-block-type="image" style="width: 960px; height: 387px; left: 0px; top: 157px;" data-block-id="aa0a203a1e0faa2f22172c03217c90a2"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="2500" data-natural-height="1007" data-lazy-loaded="" data-src="basics-of-incident-handling/c477ba25a4fe4e2367ab33c83f786ecc.png"></div></div></section><section data-id="9546deec629b1508de52df4121b4553b"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 42px; height: auto;" data-block-id="6f75e995bed65de537a08a977f2c5205"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
-<h2>Title Text</h2>
-</div></div>
-<div class="sl-block" data-block-type="image" style="width: 1120px; height: 700px; left: -80px; top: 0px;" data-block-id="0115715d00542c00ca15c67128e219c7"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="2000" data-natural-height="1250" data-lazy-loaded="" data-src="basics-of-incident-handling/9cbb5fc95237609ff70e9260063bccb4.png"></div></div></section><section data-id="c6f4292a1c67cf7212174cb75b20a3e9"><div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 960px; height: 635px; left: 0px; top: 33px;" data-block-id="196f37bd7e86641b5125e413eb81a6dc"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="2000" data-natural-height="1323" data-lazy-loaded="" data-src="basics-of-incident-handling/03d91785e49487dacddbce3aab820923.png"></div></div></section><section data-id="3beb2971c547b0af40f1d78003907441"><div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 960px; height: 540px; left: 0px; top: 81px;" data-block-id="8cff3af9bb4cb02203ea6dc5c15d65ae"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="2000" data-natural-height="1125" data-lazy-loaded="" data-src="basics-of-incident-handling/7d97b70b604bd6e83eec31355cc6d23b.png"></div></div></section><section data-id="d1eca6aea983977bc3e49001bb8d1a90"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 42px; height: auto;" data-block-id="2804cd7f2d9e949bbadf1f81543147d9"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
-<h2>csirt organization</h2>
-</div></div>
-<div class="sl-block" data-block-type="image" style="width: 763px; height: 576px; left: 99px; top: 124px;" data-block-id="3e52ccfe8966718cd6ebbbbbf2f9e300"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1788" data-natural-height="1350" data-lazy-loaded="" data-src="basics-of-incident-handling/31924f28d07f7d622ca04fbf45d7343e.png"></div></div></section></section><section class="stack" data-id="3a927d4e48887486f7dcc73bee48a7f1"><section data-id="22b0c07ac42fed96c1c6f77264e14c28"><div class="sl-block" data-block-type="text" style="width: 854px; left: 91px; top: 35px; height: auto;" data-block-id="e103c7fe94245df4231f58b164f5d492"><div class="sl-block-content" data-placeholder-tag="h1" style="font-size: 200%; text-align: left; z-index: 10;" data-placeholder-text="Text">
-<h1 style="text-align: right;"><span style="font-size:0.7em">incident</span></h1>
-
-<h1 style="text-align: right;"><span style="font-size:0.7em">response</span></h1>
-
-<h1 style="text-align: right;"><span style="font-size:0.7em">documentation</span></h1>
-</div></div></section><section data-id="185f3c78493e23127552f247b3734c07"><div class="sl-block" data-block-type="text" style="width: 384px; left: 48px; top: 105px; height: auto;" data-block-id="aebe4a1dd15a59815ad5b2dd78fbd61e"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 10;">
-<h2>must</h2>
-</div></div>
-<div class="sl-block" data-block-type="text" style="width: 384px; left: 48px; top: 210px; height: auto;" data-block-id="9565b6081c0d1d2aa62ced5feb02c873"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin urna odio, aliquam vulputate faucibus id, elementum lobortis felis. Mauris urna dolor, placerat ac sagittis quis." style="text-align: left; z-index: 11;">
-<ul>
-	<li>incoming evidence form</li>
-	<li>chain of custody form</li>
-	<li>evidence retention</li>
-	<li>evidence disposal form</li>
-	<li>forensic lab assurance</li>
-	<li>forensics processes</li>
-	<li>forensics technical manual</li>
-</ul>
-</div></div>
-<div class="sl-block" data-block-type="text" style="width: 384px; left: 528px; top: 105px; height: auto;" data-block-id="fb2420098a15e2b23de1b6a670536a4e"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 12;">
-<h2>nice-to-have</h2>
-</div></div>
-<div class="sl-block" data-block-type="text" style="width: 384px; left: 528px; top: 210px; height: auto;" data-block-id="9af8682dc4ef5e1658447ad310e00323"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin urna odio, aliquam vulputate faucibus id, elementum lobortis felis. Mauris urna dolor, placerat ac sagittis quis." style="text-align: left; z-index: 13;">
-<ul>
-	<li>forensic report template</li>
-	<li>unique data acquisition processes</li>
-	<li>forensics training manual</li>
-	<li>checklists
-	<ul>
-		<li>windows</li>
-		<li>mac</li>
-		<li>nix</li>
-		<li>aws/azure/google</li>
-	</ul>
-	</li>
-</ul>
-</div></div></section></section><section class="stack" data-id="7ed2990ae7552a6255718f734a47163c"><section data-id="b21a4fa641e3dd858a019ce4e4450d54"><div class="sl-block" data-block-type="text" style="width: 1030px; left: 0px; top: 113px; height: auto;" data-block-id="b0e0f3c08fa4aa218e6e2f8bd698b10e"><div class="sl-block-content" data-placeholder-tag="h1" style="font-size: 200%; text-align: left; z-index: 10;" data-placeholder-text="Text">
-<h1><span style="font-size:0.9em">identification</span></h1>
-</div></div></section><section data-id="e827879bb05a82d4d822e1c454e827ac"><div class="sl-block" data-block-type="text" style="width: 413px; left: 29px; top: 84px; height: auto;" data-block-id="83294348bb48aa80b7b3498d6aec83ef"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 11;">
-<h2>validation</h2>
-</div></div>
-<div class="sl-block" data-block-type="text" style="width: 413px; left: 29px; top: 158px; height: auto;" data-block-id="f77fb8babdd6f53d58e8526ec6d844a0"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec metus justo. Aliquam erat volutpat." style="z-index: 12; text-align: left;">
-<ul>
-	<li>is this really an incident?</li>
-	<li>what is the scope?</li>
-	<li>what is the impact?</li>
-</ul>
-</div></div>
-<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 480px; height: 362px; left: 480px; top: 169px;" data-block-id="c1e90da5288914f93e96e14e8946fb10"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="480" data-natural-height="362" data-lazy-loaded="" data-src="basics-of-incident-handling/a155a31c36b7657b0b448502bd86d271.gif"></div></div></section><section data-id="cea7f0a1cc971155fa9cf90dce9073c5"><div class="sl-block" data-block-type="image" style="width: 480px; height: 360px; left: 241px; top: 170px;" data-block-id="4e8df1d192103587f346660f05737b25"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="480" data-natural-height="360" data-lazy-loaded="" data-src="basics-of-incident-handling/fe4ce62c41f6fd27378925b910556c20.gif"></div></div>
-
-<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 181px; top: 70px;" data-block-id="7347ba9210c0633b1c68fc504b3c7007"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
-<h2>active or not</h2>
-</div></div></section></section><section class="stack" data-id="8accf55c33c6ded1a7b8cb65f9dc4f90"><section data-id="f69fb46cab03b01380ab6ec21d82fdfd"><div class="sl-block" data-block-type="text" style="width: 921px; left: 39px; top: 113px; height: auto;" data-block-id="bf8e1d67eee08627bfd760df10cf49cb"><div class="sl-block-content" data-placeholder-tag="h1" style="font-size: 200%; text-align: left; z-index: 10;" data-placeholder-text="Text">
-<h1 style="text-align:right"><span style="font-size:0.9em">containment</span></h1>
-</div></div></section><section data-id="a7c0d8b0941387fb4dc5fc04081ff65c"><div class="sl-block" data-block-type="image" style="width: 443px; height: 700px; left: 0px; top: 0px;" data-block-id="216b48ac9a029dfbf55a34675acf9c04"><div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="854" data-natural-height="1350" data-lazy-loaded="" data-src="basics-of-incident-handling/768032136be9a40ec8241a8270b5a971.png"></div></div>
-<div class="sl-block" data-block-type="text" style="width: 413px; left: 499px; top: 84px; height: auto;" data-block-id="84661b6e2ee4b1a435f13a7b8d78902b"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 11;">
-<h2 style="text-align: right;">preserve evidence</h2>
-</div></div>
-<div class="sl-block" data-block-type="text" style="width: 413px; left: 499px; top: 232px; height: auto;" data-block-id="1ee19872f8cf9a8c23adda632f8aedfb"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec metus justo. Aliquam erat volutpat." style="z-index: 12; text-align: left;">
-<p style="text-align: right;"> </p>
-
-<p style="text-align: right;">most volatile first</p>
-
-<p style="text-align: right;">memory</p>
-
-<p style="text-align: right;">network</p>
-
-<p style="text-align: right;">disk</p>
-
-<p style="text-align: right;"> </p>
-
-<p style="text-align: right;"> </p>
-</div></div></section><section data-id="a25832b0a742cd3fb9196f5ae72b9ee1"><div class="sl-block" data-block-type="text" style="width: 413px; left: 29px; top: 84px; height: auto;" data-block-id="bebc32a94b6b1d0a0514b23380310faf"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 10;">
-<h2>prevent lateral movement</h2>
-</div></div>
-<div class="sl-block" data-block-type="text" style="width: 413px; left: 29px; top: 306px; height: auto;" data-block-id="9086567091d278bdcfd3ea376eab554b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec metus justo. Aliquam erat volutpat." style="z-index: 12; text-align: left;">
-<p> </p>
-
-<p>people's safety first </p>
-
-<p>stay hidden (if you can)</p>
-
-<p>segment &amp; control access</p>
-
-<p>determine how this happened</p>
-</div></div>
-<div class="sl-block" data-block-type="image" style="width: 543px; height: 416px; left: 417px; top: 142px;" data-block-id="bcfcd8e1fa042cc8898962ebbf557815"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="626" data-natural-height="480" data-lazy-loaded="" data-src="basics-of-incident-handling/2bda2632459428da8216955287d5618a.gif"></div></div></section><section data-id="dd6c4dbe2d66eb9681b1a68991f3a8fc"><div class="sl-block" data-block-type="text" style="width: 413px; left: 29px; top: 84px; height: auto;" data-block-id="241f1560471a9c4df2a075c9ba3a4706"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 10;">
-<h2>laboratory</h2>
-</div></div>
-<div class="sl-block" data-block-type="text" style="width: 413px; left: 29px; top: 158px; height: auto;" data-block-id="fbbfd8ee9d18191b6ac707ad9eec1322"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec metus justo. Aliquam erat volutpat." style="z-index: 12; text-align: left;">
-<p>forensic hardware</p>
-
-<p>forensic software</p>
-
-<p>forms</p>
-
-<p> </p>
-
-<p>additional items</p>
-
-<ul>
-	<li>
-	<p><span style="font-size:0.7em">lots of extra hard drives</span></p>
-	</li>
-	<li>
-	<p><span style="font-size:0.7em">fire safe for physical evidence</span></p>
-	</li>
-	<li>
-	<p><span style="font-size:0.7em">faraday cage</span></p>
-	</li>
-</ul>
-
-<p> </p>
-</div></div>
-<div class="sl-block" data-block-type="image" style="width: 525px; height: 700px; left: 435px; top: 0px;" data-block-id="293035c4a0a19a23e3fa80904aca8cb1"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1013" data-natural-height="1350" data-lazy-loaded="" data-src="basics-of-incident-handling/6783fb6daed6b8f69cf7838fffe4e576.jpg"></div></div></section></section><section class="stack" data-id="54fb76efadb88ef7568570a8e0448ec2"><section data-id="413003f93db1713668b6034d9ca073ad"><div class="sl-block" data-block-type="text" style="width: 864px; left: 96px; top: 113px; height: auto;" data-block-id="2b8a64b2647d1c05254aa965d93d619f"><div class="sl-block-content" data-placeholder-tag="h1" style="font-size: 200%; text-align: left; z-index: 10;" data-placeholder-text="Text">
-<h1 style="text-align:right"><span style="font-size:0.9em">eradication</span></h1>
-</div></div></section><section data-id="0b9de3f62934cf0677b020afd7aee140"><div class="sl-block" data-block-type="text" style="width: 413px; left: 29px; top: 84px; height: auto;" data-block-id="c502177cd379cf0c3477adf8ed6e900c"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 10;">
-<h2>assurance</h2>
-</div></div>
-<div class="sl-block" data-block-type="text" style="width: 413px; left: 29px; top: 158px; height: auto;" data-block-id="b6288449b6141e65c6b051f91caee2b3"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec metus justo. Aliquam erat volutpat." style="z-index: 12; text-align: left;">
-<p> </p>
-
-<p>ensure containment worked</p>
-
-<p> </p>
-</div></div>
-<div class="sl-block" data-block-type="image" style="width: 445px; height: 630px; left: 483px; top: 35px;" data-block-id="451e5fcbd456c8e32e9ed507fc0a5b31"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="595" data-natural-height="842" data-lazy-loaded="" data-src="basics-of-incident-handling/3ddba54ce14b87bedc23b0c43ea4b0a6.png"></div></div></section><section data-id="f53ec45c60ff3bb90e5731b1b31cf2a8"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 42px; height: auto;" data-block-id="1a5c7ef7930794855a44f66b64ff3699"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
-<h2>restore</h2>
-</div></div>
-<div class="sl-block" data-block-type="image" style="width: 710px; height: 355px; left: 125px; top: 215px;" data-block-id="32acf51de9341f1a028a0fb5c0ee0b13"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="960" data-natural-height="480" data-lazy-loaded="" data-src="basics-of-incident-handling/6ce22d2a379e9fa909e94e1e38fb3a33.gif"></div></div></section><section data-id="856c320c567efc1acf6b2497cb48e558"><div class="sl-block" data-block-type="text" style="width: 413px; left: 29px; top: 84px; height: auto;" data-block-id="b746367478cd93a6dbe0f50943f66d28"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 10;">
-<h2>improve defenses</h2>
-</div></div>
-<div class="sl-block" data-block-type="text" style="width: 413px; left: 29px; top: 232px; height: auto;" data-block-id="c78f06c96621c34c0026982e34ea5b55"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec metus justo. Aliquam erat volutpat." style="z-index: 12; text-align: left;">
-<p>add preventative measures</p>
-
-<p>logging</p>
-
-<p>patch</p>
-
-<p>etc.</p>
-</div></div>
-<div class="sl-block" data-block-type="image" style="width: 272px; height: 480px; left: 584px; top: 110px;" data-block-id="d4dc747ecdcb1e1de6f17935b9c5df77"><div class="sl-block-content" style="z-index: 11;" href=""><img style="" data-natural-width="272" data-natural-height="480" data-lazy-loaded="" data-src="basics-of-incident-handling/20e9930437d61d0d1b6f3ad3571d96da.gif"></div></div></section></section><section class="stack" data-id="40aa3c4413f14a26f406d71fec25835e"><section data-id="38cb896ba185a6bbf7edde2a4c29cf9a"><div class="sl-block" data-block-type="text" style="width: 864px; left: 0px; top: 113px; height: auto;" data-block-id="92ac962753d58ddaaf06a35a82cdc67a"><div class="sl-block-content" data-placeholder-tag="h1" style="font-size: 200%; text-align: left; z-index: 10;" data-placeholder-text="Text">
-<h1><span style="font-size:0.9em">recovery</span></h1>
-</div></div></section><section data-id="fbbd1204d7cffaae75d8f9e60c867e09" data-background-iframe="http://i.imgur.com/vR17jcA.mp4"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 42px; height: auto;" data-block-id="ce24b8f880569178e9bfb1cb6ae00d6b"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;">
-<h2>back online</h2>
-</div></div>
-<div class="sl-block" data-block-type="video" style="min-width: 30px; min-height: 30px; width: 640px; height: 341px; left: 160px; top: 180px;" data-block-id="35d401c1af83aaaf3872c2ed17fe84e4"><div class="sl-block-content" style="z-index: 12; transition-duration: 0.6s; transition-delay: 0.6s;" data-media-id="4093417" data-video-thumb="https://s3.amazonaws.com/media-p.slid.es/videos/751485/8XRTgELT/incident_response_bill_and_steve_final_thumb_00001.jpg" data-animation-type="fade-in"><video playsinline="" poster="https://s3.amazonaws.com/media-p.slid.es/videos/751485/8XRTgELT/incident_response_bill_and_steve_final_thumb_00001.jpg" data-autoplay="" muted="" loop="loop" data-paused-by-reveal="" data-lazy-loaded="" data-src="basics-of-incident-handling/4aab9a002567b1e601ccaa42565c3fff.mp4"></video></div></div></section><section data-id="801ffa8af14c3a52b3a6205bcdc1de9f"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 574px; height: auto;" data-block-id="672cca03217c9ed2ded5b8c5ba54b572"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;">
-<h2>continue monitoring</h2>
-</div></div>
-<div class="sl-block" data-block-type="video" style="min-width: 30px; min-height: 30px; width: 640px; height: 370px; left: 160px; top: 165px;" data-block-id="b43425565f49153acf7c3de5d85a6422"><div class="sl-block-content" style="z-index: 12;" data-media-id="4093415" data-video-thumb="https://s3.amazonaws.com/media-p.slid.es/videos/751485/JQLsTDrQ/incident_response_monitoring_thumb_00001.jpg"><video playsinline="" poster="https://s3.amazonaws.com/media-p.slid.es/videos/751485/JQLsTDrQ/incident_response_monitoring_thumb_00001.jpg" data-autoplay="" muted="" loop="loop" data-paused-by-reveal="" data-lazy-loaded="" data-src="basics-of-incident-handling/e7eb5c07826f039a8c3671f3afa0c918.mp4"></video></div></div></section></section><section class="stack" data-id="f2dcd4a3004c72b92912d0b0ae6e9692"><section data-id="6890d2ba5ce55e3c5dfda8f58c176dde"><div class="sl-block" data-block-type="text" style="width: 915px; left: 45px; top: 113px; height: auto;" data-block-id="4a55c62238b0e7dd6594519a5858c90d"><div class="sl-block-content" data-placeholder-tag="h1" style="font-size: 200%; text-align: left; z-index: 10;" data-placeholder-text="Text">
-<h1 style="text-align: right;"><span style="font-size:0.9em">retrospective</span></h1>
-</div></div></section><section data-id="5bcbd276233ca78b32b45260a6d2531b"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 42px; height: auto;" data-block-id="f8cdddefcc55da0f2e49b28df039a2e7"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;">
-<h2>went well</h2>
-</div></div>
-<div class="sl-block" data-block-type="video" style="min-width: 30px; min-height: 30px; width: 640px; height: 478px; left: 160px; top: 181px;" data-block-id="fa6c15cc59a4475788ead1b0db20b75c"><div class="sl-block-content" style="z-index: 12;" data-media-id="4093359" data-video-thumb="https://s3.amazonaws.com/media-p.slid.es/videos/751485/l3oN500I/incident_response_thumbsup_thumb_00001.jpg"><video playsinline="" poster="https://s3.amazonaws.com/media-p.slid.es/videos/751485/l3oN500I/incident_response_thumbsup_thumb_00001.jpg" data-autoplay="" muted="" loop="loop" data-paused-by-reveal="" data-lazy-loaded="" data-src="basics-of-incident-handling/b6132c71d76f955d64052ee7ad8cc575.mp4"></video></div></div></section><section data-id="3adfcf3d43fec9032e7116314c9fb003"><div class="sl-block" data-block-type="text" style="width: 451px; left: 15px; top: 104px; height: auto;" data-block-id="c38c3dbf6e238ddec0ec1e469551e36b"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 10;">
-<h2>lessons learned</h2>
-</div></div>
-<div class="sl-block" data-block-type="text" style="width: 437px; left: 15px; top: 178px; height: auto;" data-block-id="d4223696e6470d5412cab590b12da7fc"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec metus justo. Aliquam erat volutpat." style="z-index: 12; text-align: left;">
-<p> </p>
-
-<p>after action meeting</p>
-
-<p>update documentation</p>
-
-<p>modify/add processes</p>
-
-<p>feedback loop</p>
-
-<p> </p>
-</div></div>
-<div class="sl-block" data-block-type="image" style="width: 451px; height: 630px; left: 480px; top: 35px;" data-block-id="a28dc18f910c4a460066a8cb0f7f0155"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="733" data-natural-height="1024" data-lazy-loaded="" data-src="basics-of-incident-handling/8045e79dd42537f9aeaa1dbaadc3d6c6.jpg"></div></div></section></section><section data-id="5a2a8c70d8c3a012b4025649144fe77d"><div class="sl-block" data-block-type="text" style="width: 915px; left: 23px; top: 0px; height: auto;" data-block-id="7c80ec5368f9e5e7028b505c5207d008"><div class="sl-block-content" data-placeholder-tag="h1" style="font-size: 200%; text-align: left; z-index: 10;" data-placeholder-text="Text">
-<h3><span style="font-size:0.9em">preparation</span></h3>
-
-<h3>identification</h3>
-
-<h3>containment</h3>
-
-<h3>eradication</h3>
-
-<h3>recovery</h3>
-
-<h3>retrospective</h3>
-
-<h3> </h3>
-
-<h3> </h3>
-
-<p> </p>
-</div></div></section><section data-id="85f256c00991b314bf3607fe028d53e3"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 266px; height: auto;" data-block-id="4149170edadc07dd40cae0cc28bc9758"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
-<h1>thank you</h1>
-</div></div></section><section data-id="4be25597ab96ef073fe36941e081b58a"><div class="sl-block" data-block-type="text" style="width: 806px; left: 80px; top: 22px; height: auto;" data-block-id="094f2f90e13ccbcd93fbe5a76f3c4dfc"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
-<h1>contact me</h1>
-</div></div>
-<div class="sl-block" data-block-type="text" style="width: 918px; left: 0px; top: 210px; height: auto;" data-block-id="2e9e064769353666a018aed55604b045"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 11;">
-<h3 style="text-align:left">
-<strong>email:</strong>    rickardja@live.com</h3>
-
-<h3 style="text-align:left">
-<strong>blog:</strong>      https://msadministrator.com</h3>
-
-<h3 style="text-align:left">
-<strong>twitter:</strong> @MS_dministrator</h3>
-
-<h3 style="text-align:left">
-<strong>github:</strong>  https://github.com/MSAdministrator</h3>
-
-<h3 style="text-align:left"> </h3>
-
-<h3 style="text-align:left">
-<strong>slides:</strong> </h3>
-</div></div></section>
-			</div>
-		</div>
-
-		<script>
-			var SLConfig = {"deck": {"id":1064048,"slug":"basics-of-incident-handling","title":"Basics of Incident Handling","description":"Basics of Incident Handling was presented at BSides STL on September 9th, 2017 by Josh Rickard","width":960,"height":700,"visibility":"all","published_at":"2017-08-31T01:54:54.863Z","sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/2cc2f5f443dc4492dfd787e9e7a29652/thumb.jpg?570957507","view_count":3,"user":{"id":751485,"username":"msadministrator","name":null,"description":null,"thumbnail_url":"https://www.gravatar.com/avatar/a3cab24cca7ccf6c969a9161fa1405ef?s=140\u0026d=https%3A%2F%2Fs3.amazonaws.com%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","paid":true,"pro":false,"lite":true,"team_id":null,"settings":{"id":601912,"present_controls":true,"present_upsizing":true,"present_pointer":false,"present_notes":true}},"background_transition":"slide","transition":"slide","theme_id":null,"theme_font":"montserrat","theme_color":"white-blue","auto_slide_interval":0,"comments_enabled":true,"forking_enabled":true,"rolling_links":false,"center":false,"should_loop":false,"share_notes":false,"slide_number":false,"rtl":false,"version":2,"collaborative":null,"deck_user_editor_limit":1,"data_updated_at":1504498468954,"font_typekit":null,"font_google":null,"notes":{"a0ce90a33cc2b9efa3bdfc600bacd6fc":"Acceptable Use Policies\nEndpoints\nNetwork\nData\nData classification \u0026 retention policies\nNotification/Escalation Procedures\nCritical Incident Response Team plan\nEvidence Handling standards\n\n\nThe preparation phase of any incident response team is to ensure that there is a standard set of rules/layout for how to handle an incident.\n\nThese policies can include, but not limited to, \nAcceptable Use Policies for endpoints/computers, network usage, and data usage\nAdditionally, define a data classification system and retention policy\nDefine how escalations/notifications reach your team and how they enact your CIRT \nYou also need to have standards on how to track, use, and investigate incidents\n\n\n\n","a1f9e1335191ca2687cf80a382fbb84c":"Acceptable Use Policy should be focused on user/account access, computer access, data, and network access.\n\n\nViolations of this policy should result in a loss of access or disciplinary/legal action\n","06a543076c8d88760e86f1f58b4b654b":"Definitions or keywords:  These are typically your organizations definition of what data classification you have.  Meaning, what is exactly PII or PHI.\n\nRoles \u0026 Responsibilities: You need to define what these roles are, with primary and secondary individuals.  You also need to have contact information for both. \nIncident\tResponse Coordinator\nIncident\tResponse Handlers\nLaw Enforcement\nOffice of General Counsel (legal)\n\nDefine your methodologies\n","e827879bb05a82d4d822e1c454e827ac":"Do we need to enable our CSIRT team or can this be handled by specified individuals?","a7c0d8b0941387fb4dc5fc04081ff65c":"Have a process for capturing evidence\nDO NOT TURN OFF THE COMPUTER\nGrab memory first, then networking logs, then hard drive\n\nIf you can, grab full packet captures from that machine, rather than pulling the network but this is all based on what the scope and impact of exfiltration may be\n\nAlso, port mirroring is worthwhile if you can.","a25832b0a742cd3fb9196f5ae72b9ee1":"https://technet.microsoft.com/en-us/library/cc700825.aspx\n\n","dd6c4dbe2d66eb9681b1a68991f3a8fc":"Forensics Hardware: \nduplicators\nadapters for everything imaginable\ndata storage (last place had 2 FREDs with 64GB of RAM, dual xeon's, 60TB NAS with 10-gig link and a 10-gig link backup to datacenter)\n\nForensic software:\nSIFT\nEncase Enterprise\nFTK Enterprise\ntons of others\n\nForms:\nEvidence intake forms (track if captured, modified/moved, timestamps, etc.)\nEvidence retention policies/forms\nChain of custody forms\n\nAdditional items may include:\nlots of extra hard drives\nfire safe big enough to hold physical evidence/documents\nfaraday cage","f53ec45c60ff3bb90e5731b1b31cf2a8":"You should either re-image the impacted system (best possible choice) or restore from a known GOOD backup (this may be hard to determine).","5bcbd276233ca78b32b45260a6d2531b":"identify what went well\nfinalize any outstanding or uncompleted documentation\ncreate a formal incident report to share with any stakeholders involved\n"}}};
-
-
-			// Use local fonts
-			SLConfig.fonts_url = 'lib/fonts/';
-		</script>
-
-		<script src="lib/head.min.js"></script>
-		<script src="lib/reveal.min.js"></script>
-		<script src="lib/offline.js"></script>
-
-		<!-- Initialize the presentation -->
-		<script>
-			Reveal.initialize({
-				width: 960,
-				height: 700,
-				margin: 0.05,
-
-				controls: true,
-				progress: true,
-				history: true,
-				mouseWheel: false,
-				showNotes: false,
-				slideNumber: false,
-
-				autoSlide: 0 || 0,
-				autoSlideStoppable: true,
-
-				center: false,
-				loop: false,
-				rtl: false,
-
-				transition: "slide",
-				backgroundTransition: "slide",
-
-				dependencies: [
-					{ src: 'lib/reveal-plugins/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'lib/reveal-plugins/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'lib/reveal-plugins/highlight/highlight.js', async: true, callback: function() { hljs.initHighlighting(); hljs.initHighlightingOnLoad(); } },
-					{ src: 'lib/reveal-plugins/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-				]
-			});
-		</script>
-
-		
-
-	</body>
+</section>
+
+  <aside id="sidebar">
+
+    <h2>MSAdministrator slides</h2>
+    <p>Talks on creating PowerShell tools, Digital Forensics, Incident Response, and general Windows defense.</p> 
+    <p>Each slide deck is an HTML5 webpage for easy viewing.</p>  
+
+
+    <h2>MSAdministrator Work</h2>
+    <ul>
+     <li><a href="https://msadministrator.com">Blog</a></li>
+     <li><a href="http://msadministrator.github.io/presentations">Slides</a></li>
+     <li><a href="http://github.com/msadministrator">Github</a></li>
+     <li><a href="https://twitter.com/MS_dministrator">Twitter</a></li>
+    </ul>
+  </aside>
+      </div>
+    </div>
+
+  
+  </body>
 </html>
