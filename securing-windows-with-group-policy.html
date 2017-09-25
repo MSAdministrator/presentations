@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+	<html class="sl-root decks export offline loaded">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>Securing Windows with Group Policy: Slides</title>
+		<meta name="description" content="Slides">
+
+		<link rel="stylesheet" type="text/css" href="lib/offline-v2.css">
+
+
+
+	</head>
+	<body class="reveal-viewport theme-font-overpass2 theme-color-silver-blue">
+		<div class="reveal">
+			<div class="slides">
+				<section data-id="79b96d950179d162f14437789f0e938b"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 238px; height: auto;" data-block-id="bdb8b5d60199413aeb1f996d6f990685"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text">
+<h1>securing windows with group policy</h1>
+</div></div></section><section data-id="98bbd1d6549f897cb52b47be31b8e2a1"><div class="sl-block" data-block-type="text" style="width: 413px; left: 29px; top: 84px; height: auto;" data-block-id="bc2603c2cfd43e50e4d0aa4d96a597bd"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 10;">
+<h2>Josh rickard</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 413px; left: 20px; top: 131px; height: auto;" data-block-id="fa3a3fb997c653c13b62813fc67c51d3"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec metus justo. Aliquam erat volutpat." style="z-index: 12; text-align: left;">
+<p> </p>
+
+<p> </p>
+
+<p>7 yrs in IT</p>
+
+<p> </p>
+
+<p>GCWN</p>
+
+<p>GCFA</p>
+
+<p> </p>
+
+<p>Windows Security</p>
+
+<p>Digital Forensics</p>
+
+<p>PowerShell Automation</p>
+
+<p> </p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 639px; height: 639px; left: 321px; top: 31px;" data-block-id="e1107b521e1731560f4638b8e109ca0f"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="960" data-natural-height="960" data-lazy-loaded="" data-src="securing-windows-with-group-policy/12834fc6f3b9d328a8a7344395928ce4.jpg"></div></div></section><section class="stack" data-id="5cfd5dd024dd379a18e080880b1e2d38"><section data-id="c6a441d26b2e9e64743ea117356fff54"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="d94da9302808c8a37f19e19d0ab3361f"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>LSD OU</h1>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 806px; height: 482px; left: 77px; top: 179px;" data-block-id="9ecce31c67aac3ce308014a4d1137a2a"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="1041" data-natural-height="623" data-lazy-loaded="" data-src="securing-windows-with-group-policy/aa11a48561d1a0aeea7928d2b1b73182.png"></div></div></section><section data-id="214569458d2c762aaddfd4595e027b46"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 42px; height: auto;" data-block-id="1ba1ce6d52a7cf1acfd7045d577ced70"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;">
+<h2>Local</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 960px; height: 504px; left: 0px; top: 126px;" data-block-id="5be77cbc5e8f39d8b2a36ed39bd45a9f"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="1256" data-natural-height="660" data-lazy-loaded="" data-src="securing-windows-with-group-policy/8b4ae2a02f549b7619429604d09664bf.png"></div></div></section><section data-id="3a81c1bc4defa343b9e3e39061e4e012"><div class="sl-block" data-block-type="text" style="width: 413px; left: 29px; top: 84px; height: auto;" data-block-id="48b34a5e6dbfc3fa606d31af5d43136f"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 10;">
+<h2>Local group policy</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 413px; left: 29px; top: 125px; height: auto;" data-block-id="c804418e475ffb4707c7ae79abeb175d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec metus justo. Aliquam erat volutpat." style="z-index: 12; text-align: left;">
+<p> </p>
+
+<p>Machine/User specific settings</p>
+
+<p>Free-for-all</p>
+
+<p>Unmanaged</p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 410px; height: 630px; left: 501px; top: 35px;" data-block-id="a8be176f211e64a6efd19ebd82ed6d1f"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="774" data-natural-height="1188" data-lazy-loaded="" data-src="securing-windows-with-group-policy/9bc5b9e81767b16eb49bc6eae4dac556.png"></div></div></section><section data-id="5ed99b2818c4e8173ae69a487653f0fc"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 42px; height: auto;" data-block-id="e4205e48643ac8cba8a25e466137dd12"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>site</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 960px; height: 681px; left: 0px; top: 19px;" data-block-id="1f4afd6a42368e5ae32957a063ad7412"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1600" data-natural-height="1135" data-lazy-loaded="" data-src="securing-windows-with-group-policy/2403dab40b449ce5f3583148830afc1c.png"></div></div></section><section data-id="d8512e324ac06e0633971737bee4d65f"><div class="sl-block" data-block-type="image" style="width: 444px; height: 700px; left: 0px; top: 0px;" data-block-id="e6a89d9acfaa476207bfe310802ff063"><div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="856" data-natural-height="1350" data-lazy-loaded="" data-src="securing-windows-with-group-policy/1615538d62092fa10b55af90adafd948.png"></div></div>
+<div class="sl-block" data-block-type="text" style="width: 413px; left: 499px; top: 82px; height: auto;" data-block-id="f92cdb71594aeeaf1254d29217512379"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 11;">
+<h2>site based group policy</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 413px; left: 499px; top: 158px; height: auto;" data-block-id="15b95026001dd9507d527a39cc713393"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec metus justo. Aliquam erat volutpat." style="z-index: 12; text-align: left;">
+<p> </p>
+
+<p>Location based</p>
+
+<p>Subnet based</p>
+
+<p> </p>
+</div></div></section><section data-id="1a069e82556d8d732b52ac6db46eeba5"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 42px; height: auto;" data-block-id="afc7640b707bedd1401bc43d4285b49a"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Domain</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 960px; height: 653px; left: 0px; top: 24px;" data-block-id="236ea4f0e18ef5829f2137b8def848fd"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1240" data-natural-height="844" data-lazy-loaded="" data-src="securing-windows-with-group-policy/67d6b445d47566a682cd35456578a87e.png"></div></div></section><section data-id="6138c5163276d84822486583480d1a08"><div class="sl-block" data-block-type="image" style="width: 960px; height: 552px; left: 0px; top: 74px;" data-block-id="ed78774b3a22bb6ffb072ae587701f85"><div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="918" data-natural-height="528" data-lazy-loaded="" data-src="securing-windows-with-group-policy/60746cee22125fe1dfb6b89b53133463.png"></div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 610px; height: auto;" data-block-id="23c0af1dcecb13ffb49b685e293c5c5b"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;">
+<h2>Domain</h2>
+</div></div></section><section data-id="2133c3a8911240afacb7c7f57ca58cbf"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 42px; height: auto;" data-block-id="8266ba6ff03fc6b322ec9f31b59875ac"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Organizational unit</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 960px; height: 414px; left: 0px; top: 143px;" data-block-id="2f2247cba903a433edbafac78a81f594"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="800" data-natural-height="345" data-lazy-loaded="" data-src="securing-windows-with-group-policy/13e9bfd3476482c83eee09aa300c249a.png"></div></div></section><section data-id="52709ad05f3ea20be8aabbefba3ac3de"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 42px; height: auto;" data-block-id="36be08ee5e254b7109e79a08d230684a"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>your street</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 960px; height: 558px; left: 0px; top: 142px;" data-block-id="e5b07d0afb2336dd2d6651a673a2d17f"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="2324" data-natural-height="1350" data-lazy-loaded="" data-src="securing-windows-with-group-policy/f1ccd2fa2790c393e75cc72f7ce5305a.jpg"></div></div></section><section data-id="acd287078e76d9ef9c4b168e0c78770c"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 42px; height: auto;" data-block-id="116133b07c6ce55387b5fb92a423ff45"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>your home</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 960px; height: 591px; left: 0px; top: 109px;" data-block-id="70ae174c5ee56b3bfb11a1329f64ae52"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1302" data-natural-height="802" data-lazy-loaded="" data-src="securing-windows-with-group-policy/9702ff7fe7bfd73afdbad7a7ebce4bc0.png"></div></div></section><section data-id="85bca7d512b51b6da873383b97a9bfa2"><div class="sl-block" data-block-type="text" style="width: 413px; left: 29px; top: 84px; height: auto;" data-block-id="64580188c48c81bf2bb2736c6e3e2839"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 10;">
+<h2>your rooms</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 413px; left: 29px; top: 125px; height: auto;" data-block-id="ecea80bb7f651dec60b9d757213ea7fe"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec metus justo. Aliquam erat volutpat." style="z-index: 12; text-align: left;">
+<p> </p>
+
+<p>Even down to your refrigerator</p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 525px; height: 630px; left: 435px; top: 35px;" data-block-id="51d5ceac950436b1e91e3eee66bcf4ed"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1125" data-natural-height="1350" data-lazy-loaded="" data-src="securing-windows-with-group-policy/b27819920d69782a10dca2f69a4fdd58.png"></div></div></section></section><section class="stack" data-id="4db36bb239af84f4ca402e1eae6b7920"><section data-id="1c97d53787e4f20a03e7bf0225407ae5"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 70px; height: auto;" data-block-id="0f67219c2f4071c27f71cfbe1a5e8d3f"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>manage users</h1>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 650px; height: 450px; left: 155px; top: 180px;" data-block-id="94083673c534b06559bb8763603754de"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="650" data-natural-height="450" data-lazy-loaded="" data-src="securing-windows-with-group-policy/11d57fcc4e39db6e45a5286238f4f70f.gif"></div></div></section><section data-id="5f08cc904ceb44c93ddf576b23e71b10"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 42px; height: auto;" data-block-id="a73bfdbeef56bc34c13dad477ece1b57"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;"><h2>Title Text</h2></div></div>
+<div class="sl-block" data-block-type="image" style="width: 960px; height: 689px; left: 0px; top: 6px;" data-block-id="6a4d5d09dde1d13cf126af09431a5291"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1882" data-natural-height="1350" data-lazy-loaded="" data-src="securing-windows-with-group-policy/d2e8da8dff762e6930bf64ba557f5895.png"></div></div></section><section data-id="a8f9b0224fef0ba986d5e6c1e55a2185"><div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 960px; height: 691px; left: 0px; top: 5px;" data-block-id="da33b1e8f80d1ff69cd28a43561ee350"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="771" data-natural-height="555" data-lazy-loaded="" data-src="securing-windows-with-group-policy/e68518fb73d7203f9e65241259344813.png"></div></div></section><section data-id="2f8e517107bd70d1649389bf309b4dde"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 42px; height: auto;" data-block-id="8190070496728d99d79abbf923e2cd5e"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Restricted groups</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 960px; height: 560px; left: 0px; top: 140px;" data-block-id="bda1f6dbc99cc01680595b34ccfa447f"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1041" data-natural-height="607" data-lazy-loaded="" data-src="securing-windows-with-group-policy/1dc999664e1daa1692dc7d3b02c9beda.png"></div></div></section><section data-id="101c2636aeba76b5a5b5a3d0f53b9aa6">
+<div class="sl-block" data-block-type="image" style="width: 960px; height: 535px; left: 0px; top: 83px;" data-block-id="80cd13d79ad536f160845d0e7e14022b"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="942" data-natural-height="525" data-lazy-loaded="" data-src="securing-windows-with-group-policy/7010e00aad2bf02a2a4ec44103b12b85.png"></div></div></section><section data-id="7796dfbd2893b7184b7902dc281eeada"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 42px; height: auto;" data-block-id="374592ba4221fdd1cebca35dcbe6a515"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;"><h2>Title Text</h2></div></div>
+<div class="sl-block" data-block-type="image" style="width: 960px; height: 619px; left: 0px; top: 41px;" data-block-id="5e5d2b9ad4f99d4bfb39672715d2b929"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="943" data-natural-height="608" data-lazy-loaded="" data-src="securing-windows-with-group-policy/5181f668453ad7c5c33a8ffebc068c66.png"></div></div></section><section data-id="d8ee1c74c73c95c5d6b2045defa888d4"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 42px; height: auto;" data-block-id="d832d2ff93694ea16f5cf09af737d9bf"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;"><h2>Title Text</h2></div></div>
+<div class="sl-block" data-block-type="image" style="width: 960px; height: 642px; left: 0px; top: 29px;" data-block-id="41831badb61b727d8e748afd10018dfa"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="903" data-natural-height="604" data-lazy-loaded="" data-src="securing-windows-with-group-policy/93301a4f6df8c148043d2ff8c7d9b125.png"></div></div></section></section><section class="stack" data-id="384a677276f4997a00d33cc539aecb64"><section data-id="3609e7b6a9eb2fd63cacddb869f02739"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 29px; height: auto;" data-block-id="d50a16640cdee58024c0ae2d4d291abb"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>user rights</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 564px; height: 630px; left: 198px; top: 70px;" data-block-id="9dc01dc577e794e10c668da32dd2ebfa"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="480" data-natural-height="536" data-lazy-loaded="" data-src="securing-windows-with-group-policy/0979e4571894b61ec12568bed4caf707.png"></div></div></section><section data-id="877fbbebb15ffa907663be43558d1972"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 14px; height: auto;" data-block-id="c9d839d497b2060fab0a4e3ff1170c23"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>buying a new home</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 960px; height: 636px; left: 0px; top: 64px;" data-block-id="22a67af3d5f317ac109eb1f1d1e20147"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="975" data-natural-height="646" data-lazy-loaded="" data-src="securing-windows-with-group-policy/b325610674c87890370fab933ebd593f.png"></div></div></section><section data-id="5d96157441ee2c6e9390b720d64ed254"><div class="sl-block" data-block-type="text" style="width: 413px; left: 29px; top: 84px; height: auto;" data-block-id="0a60a14e7837613a268f46aa4836d9b9"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 10;">
+<h2><strong>PRIVILEGES</strong></h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 413px; left: 0px; top: 151px; height: auto;" data-block-id="8d5e11dcf93fdd5a2f9bc1d33edb1b32"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec metus justo. Aliquam erat volutpat." style="z-index: 12; text-align: left;">
+<ul>
+	<li style="color:rgb(17, 17, 17)">
+	<p>Act As Part of the Operating System</p>
+	</li>
+	<li style="color:rgb(17, 17, 17)">
+	<p>Create a Token Object</p>
+	</li>
+	<li style="color:rgb(17, 17, 17)">
+	<p>Debug Programs</p>
+	</li>
+	<li style="color:rgb(17, 17, 17)">
+	<p>Impersonate a Client After Authentication</p>
+	</li>
+	<li style="color:rgb(17, 17, 17)">
+	<p>Load and Unload Device Drivers</p>
+	</li>
+	<li style="color:rgb(17, 17, 17)">
+	<p>Restore Files and Directories</p>
+	</li>
+	<li style="color:rgb(17, 17, 17)">
+	<p>Take Ownership</p>
+	</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 520px; height: 700px; left: 440px; top: 0px;" data-block-id="4408749b7a2f5fe1d4b614945674446b"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1003" data-natural-height="1350" data-lazy-loaded="" data-src="securing-windows-with-group-policy/90f9f0d019da1a35bbb80858b6e383ac.png"></div></div></section><section data-id="8a84698213cd0f09bba7a7f2302aa360"><div class="sl-block" data-block-type="text" style="width: 613px; left: 0px; top: 70px; height: auto;" data-block-id="fb83ba61ebdbf90d2f17041b140d6ea1"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;">
+<h2><span style="color:rgb(76, 76, 76)">Impersonate A Client Privilege</span></h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 606px; left: 0px; top: 140px; height: auto;" data-block-id="0ec553c2bed54dce89f36253535293f0"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<ul>
+	<li>Primary Security Access Token (SAT)
+	<ul>
+		<li>Impersonate a user’s SAT for other running processes</li>
+	</ul>
+	</li>
+	<li>Used by network services to impersonate clients</li>
+	<li>Token stealing
+	<ul>
+		<li>Steal SATs for network authentication</li>
+	</ul>
+	</li>
+</ul>
+
+<p> </p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 307px; left: 0px; top: 621px;" data-block-id="1a71e74f5aad85544a057cf490376b88"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p><em><span style="text-align:start">SeImpersonatePrivilege</span></em></p>
+
+<p><em><span style="text-align:start">SeCreateGlobalPrivilege</span></em></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 348px; height: 700px; left: 612px; top: 0px;" data-block-id="f8896dfc8db7ed48ea0fddc933aada2d"><div class="sl-block-content" style="z-index: 14;"><img style="" data-natural-width="672" data-natural-height="1350" data-lazy-loaded="" data-src="securing-windows-with-group-policy/43829376094a7ae47d8848de84a7d08f.png"></div></div>
+
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 246px; height: 216px; left: 560px; top: 484px;" data-block-id="6575807c5674329d26643b829be08784"><div class="sl-block-content" data-shape-type="symbol-sad" data-shape-fill-color="rgb(255, 153, 0)" data-shape-stretch="true" style="z-index: 16;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 32 32"><g class="shape-element" fill="rgb(255, 153, 0)"><path d="M16 32c8.837 0 16-7.163 16-16s-7.163-16-16-16-16 7.163-16 16 7.163 16 16 16zM16 3c7.18 0 13 5.82 13 13s-5.82 13-13 13-13-5.82-13-13 5.82-13 13-13zM8 10c0-1.105 0.895-2 2-2s2 0.895 2 2c0 1.105-0.895 2-2 2-1.105 0-2-0.895-2-2zM20 10c0-1.105 0.895-2 2-2s2 0.895 2 2c0 1.105-0.895 2-2 2-1.105 0-2-0.895-2-2zM9.997 24.398l-2.573-1.544c1.749-2.908 4.935-4.855 8.576-4.855 3.641 0 6.827 1.946 8.576 4.855l-2.573 1.544c-1.224-2.036-3.454-3.398-6.003-3.398-2.549 0-4.779 1.362-6.003 3.398z"></path></g></svg></div></div></section><section data-id="4a2959b153f32d1d0314317f18790c0c"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 50px; height: auto;" data-block-id="7322da89c81032f67b6e3a41471332e0"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;">
+<h2><span style="color:rgb(76, 76, 76)">Debug Programs Privilege</span></h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 140px; height: auto;" data-block-id="109c07958a053c93a52c2c50c353edbc"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<ul>
+	<li>
+	<p>Grants read/write access to user &amp; kernel-mode memory</p>
+	</li>
+	<li>
+	<p>Malware uses it for:</p>
+
+	<ul>
+		<li>
+		<p>New thread injected into any process</p>
+		</li>
+		<li>
+		<p>Passwords, hashes, encryption keys and other data can be read out of kernel space memory without DLL injection.</p>
+		</li>
+	</ul>
+	</li>
+	<li>
+	<p>Pass-The-Hash Attacks</p>
+
+	<ul>
+		<li>
+		<p>Once malware has your password hash they can:</p>
+
+		<ul>
+			<li>
+			<p>Extract password hashes of local accounts</p>
+			</li>
+			<li>
+			<p>Extract password hashes of interactive users with AD accounts</p>
+			</li>
+			<li>
+			<p>Plus others</p>
+			</li>
+		</ul>
+		</li>
+	</ul>
+	</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 233px; left: 0px; top: 664px;" data-block-id="b5322110b48328dc18be5d6f12161852"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p><em>SeDebugPrivilege</em></p>
+</div></div></section><section data-id="9e278e509838508645d980d3baa15694"><div class="sl-block" data-block-type="text" style="width: 806px; left: 78px; top: 15px; height: auto;" data-block-id="80b70333fd2cd5a2265c410d0ad5609d"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;">
+<h2>PETyA</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 869px; height: 630px; left: 46px; top: 70px;" data-block-id="8404c5dfbb897008277cacd517477cfc"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="1674" data-natural-height="1214" data-lazy-loaded="" data-src="securing-windows-with-group-policy/183a9a45d39d0be367729f232e6636bc.png"></div></div></section><section data-id="08578692de31e31502c42a1a4c633ea1"><div class="sl-block" data-block-type="text" style="width: 413px; left: 29px; top: 84px; height: auto;" data-block-id="0ff9bb99dd0af2507add7ffdca36e3e9"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 10;">
+<h2>LOgon rights</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 413px; left: 0px; top: 210px; height: auto;" data-block-id="fb9d60e08e4252e57d887a3e9981d98c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec metus justo. Aliquam erat volutpat." style="z-index: 12; text-align: left;">
+<ul>
+	<li style="color:rgb(17, 17, 17)">Deny access to this computer from the network</li>
+	<li style="color:rgb(17, 17, 17)">Deny log on as a batch job</li>
+	<li style="color:rgb(17, 17, 17)">Deny log on locally</li>
+	<li style="color:rgb(17, 17, 17)">Deny log on as a service</li>
+	<li style="color:rgb(17, 17, 17)">Deny log on through Remote Desktop Services</li>
+	<li style="color:rgb(17, 17, 17)">Allow log on through Remote Desktop Services</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 531px; height: 490px; left: 429px; top: 105px;" data-block-id="04b7235f01a2b429639cf9ec48ef2522"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="819" data-natural-height="756" data-lazy-loaded="" data-src="securing-windows-with-group-policy/117eef9d2656ea6762edfbe6d7a14755.png"></div></div></section><section data-id="b5a1ad88a009d81f35641795f0d50e39"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 42px; height: auto;" data-block-id="1ddddf8b2276316ede012ef22b8d590f"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;"><h2>Title Text</h2></div></div>
+<div class="sl-block" data-block-type="image" style="width: 960px; height: 684px; left: 0px; top: 8px;" data-block-id="556348dd389bbfbbd7add6be5fc91009"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1896" data-natural-height="1350" data-lazy-loaded="" data-src="securing-windows-with-group-policy/0014480525d4df067dfcd66ede263fef.png"></div></div></section><section data-id="8d337de7b0387b82612795f202616490"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 42px; height: auto;" data-block-id="4e3cf906d35e1b690e3588dd07d96af5"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;"><h2>Title Text</h2></div></div>
+<div class="sl-block" data-block-type="image" style="width: 960px; height: 667px; left: 0px; top: 17px;" data-block-id="6ceb5a8f70fad163f3aee8afdb011de7"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1654" data-natural-height="1150" data-lazy-loaded="" data-src="securing-windows-with-group-policy/7e5e1614f37e7ae9a7c463cd8c5f9c34.png"></div></div></section></section><section class="stack" data-id="51d1248de4121467ec97435d0290af7d"><section data-id="c5e901ee4474b23fb5180ae02bbf2d8d"><div class="sl-block" data-block-type="text" style="width: 803px; left: 79px; top: 7px; height: auto;" data-block-id="f4bc44a9348f151cf1a0e972f84a90f2"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Task scheduler</h1>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 960px; height: 540px; left: 0px; top: 90px;" data-block-id="34f7fe9cf6547f4fcd64ab6b7d29a7c0"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="1920" data-natural-height="1080" data-lazy-loaded="" data-src="securing-windows-with-group-policy/042292ddef76a02e12751237ac7fa14b.jpg"></div></div></section><section data-id="b7877e7487e87dec4ef15c7d8f988363"><div class="sl-block" data-block-type="text" style="width: 806px; left: 80px; top: 70px; height: auto;" data-block-id="26d58100dbdf0f23b1874626fdf45b3f"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>LEAST to MOST</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 140px; height: auto;" data-block-id="cb404451878f1722563a083741f8b1b9"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<ul>
+	<li>
+	<p><span style="font-size:1.0em">Local Service</span></p>
+	</li>
+	<li>
+	<p><span style="font-size:1.0em">Virtual Service Account</span></p>
+	</li>
+	<li>
+	<p><span style="font-size:1.0em">Network Service</span></p>
+	</li>
+	<li>
+	<p><span style="font-size:1.0em">Local User Account (non-Admin)</span></p>
+	</li>
+	<li>
+	<p><span style="font-size:1.0em">Group Managed Service Account (domain user)</span></p>
+	</li>
+	<li>
+	<p><span style="font-size:1.0em">Domain User</span></p>
+	</li>
+	<li>
+	<p><span style="font-size:1.0em">Local System</span></p>
+	</li>
+	<li>
+	<p><span style="font-size:1.0em">Local User (local admin)</span></p>
+	</li>
+	<li>
+	<p><span style="font-size:1.0em">Global User (local admin</span></p>
+	</li>
+	<li>
+	<p><span style="font-size:1.0em">Global User (domain admin)</span></p>
+	</li>
+	<li>
+	<p><span style="font-size:1.0em">Global User (Enterprise Admin)</span></p>
+	</li>
+</ul>
+</div></div></section><section data-id="6ac2d300ac80fedd7246677a7546ad4b"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 42px; height: auto;" data-block-id="aaf168cc736b61de5edd4de7177b57fb"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>IMMEDIATE SCHEDULED TASKS</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 650px; height: 450px; left: 155px; top: 167px;" data-block-id="bd9589deb25180cc8142902d1c5eeab8"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="650" data-natural-height="450" data-lazy-loaded="" data-src="securing-windows-with-group-policy/f488d2e72ddd265e18ba82d855208363.gif"></div></div></section><section data-id="3239180da8180b8397851b9b10135999"><div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 2px; height: auto;" data-block-id="82f1d82ad61202339302edae5eb6745e"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<ul>
+	<li style="text-align:left">
+<span style="font-size:0.9em"><em>Program/Script:</em></span>
+	<ul>
+		<li style="text-align:left"><span style="font-size:0.9em"><em>C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe</em></span></li>
+	</ul>
+	</li>
+	<li style="text-align:left">
+<span style="font-size:0.9em"><em><em>Add Arguments:</em></em></span>
+	<ul>
+		<li style="text-align:left"><span style="font-size:0.9em"><em><em><em>-NoProfile -Executionpolicy bypass -file "\\path\to\Invoke-Awesomeness.ps1" -Parameter 'MSPaint'</em></em></em></span></li>
+	</ul>
+	</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 743px; height: 490px; left: 109px; top: 210px;" data-block-id="d2ae384ea7a3487ff2b1a97c73dc5d57"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="1628" data-natural-height="1074" data-lazy-loaded="" data-src="securing-windows-with-group-policy/ac5e537950543fc8663c2d831f0cae15.png"></div></div></section><section data-id="fb0255325ea94a15bb6af62f17f621c4"><div class="sl-block" data-block-type="text" style="width: 449px; left: 218px; top: 29px; height: auto;" data-block-id="aeeb16678a0c7a36d063a2ceee7c9a92"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 11;">
+<h2>secure code execution</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 413px; left: 236px; top: 77px; height: auto;" data-block-id="50c9b5c66543741fe4f9feab786e514e"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec metus justo. Aliquam erat volutpat." style="z-index: 13; text-align: left;">
+<ul>
+	<li>Run whether user is logged on or not</li>
+	<li>Do not store password</li>
+	<li>Run with highest privileges</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 560px; height: 389px; left: 163px; top: 311px;" data-block-id="3bb8b8c02029569bb93826638428b062"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="782" data-natural-height="543" data-lazy-loaded="" data-src="securing-windows-with-group-policy/ccef250024b997421fa3eb4026782350.gif"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 228px;" data-block-id="17966166b6cfb830e8c1b33d18ec5afa"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p><strong>Hint:</strong><span style="color:rgb(17, 17, 17); text-align:left"> If you are attempting to communicate over the network, try </span><em>Network Service</em><span style="color:rgb(17, 17, 17); text-align:left"> first!</span></p>
+</div></div></section></section><section class="stack" data-id="92baa733e6d8499e50f8cc866efbd496"><section data-id="1bbd94b4b8792681def58b204f4ad255"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 70px; height: auto;" data-block-id="542c4d41706e6a8868da91fd1253947f"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;" dir="ui"><h1>manage services</h1></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 595px; height: 407px; left: 183px; top: 210px;" data-block-id="56b2827da45d6694a7155ea6d73119c7"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="595" data-natural-height="407" data-lazy-loaded="" data-src="securing-windows-with-group-policy/6b9e3698cdd4d1eb6eb9b5cf8e9bac12.jpg"></div></div></section><section data-id="e01c1d2ab1b955c81c89fd89d598b323"><div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 224px; height: 700px; left: 80px; top: 0px;" data-block-id="3849735bf8dbbb4ebe69f410dcbf6ce2"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="432" data-natural-height="1350" data-lazy-loaded="" data-src="securing-windows-with-group-policy/6b3d9e0adeb03b9fb2cfcf68f2c07cf8.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 213px; height: 700px; left: 400px; top: 0px;" data-block-id="3a41649da49f04238733613dfc6aba04"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="411" data-natural-height="1350" data-lazy-loaded="" data-src="securing-windows-with-group-policy/5a8d9515728be68907a736d93c0472c2.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 296px; height: 518px; left: 664px; top: 91px;" data-block-id="2b0d14a2e328e6a6de69761d8864abb0"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="688" data-natural-height="1206" data-lazy-loaded="" data-src="securing-windows-with-group-policy/dc4f82a60b92dee7480f29c129bce4cb.png"></div></div></section><section data-id="2318387961209c22c75506c4ff6eb0f1"><div class="sl-block" data-block-type="text" style="width: 193px; left: 384px; top: 99px; height: auto;" data-block-id="c884de313af07098d437de45487d1821"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>iis server</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 563px; left: 199px; top: 210px; height: auto;" data-block-id="f252e2bf4d0dec7bd532e1a3f3d6eaeb"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<ul>
+	<li>DCOM Server Process Launcher</li>
+	<li>Event Log</li>
+	<li>Protected Storage</li>
+	<li>Remote Procedure Call (RPC) Service</li>
+	<li>Windows Installer</li>
+	<li>Windows NTLM Security Support Provider</li>
+	<li>Windows Process Activation Service</li>
+	<li>World Wide Web Publishing Service</li>
+</ul>
+</div></div></section><section data-id="e72657ee9f9bb48d5388284ca88dad83"><div class="sl-block" data-block-type="text" style="width: 413px; left: 29px; top: 84px; height: auto;" data-block-id="ca277db2337ca7572e08fb329333b096"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 10;">
+<h2>TURN THEM OFF</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 338px; height: 247px; left: 0px; top: 297px;" data-block-id="82e8355ea0addbd8d4737de5f3ac2a8e"><div class="sl-block-content" style="z-index: 13; transition-duration: 0.6s; transition-delay: 5s;" data-animation-type="fade-in"><img style="" data-natural-width="782" data-natural-height="572" data-lazy-loaded="" data-src="securing-windows-with-group-policy/8a38ac30d71b870a753d5f0acbda2afd.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 960px; height: 572px; left: 0px; top: 128px;" data-block-id="16af05f565b6b7f0067c1503cc9b24fb"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="1884" data-natural-height="1122" data-lazy-loaded="" data-src="securing-windows-with-group-policy/b70210079219b8e5c9f6780d733f4e18.png"></div></div></section><section data-id="d9953d9ead185b5097d6d1a27d6bb697"><div class="sl-block" data-block-type="text" style="width: 806px; left: 80px; top: 42px; height: auto;" data-block-id="c4de8c7bec24ab05de9443eb38ab10bd"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;">
+<h2>process mitigation</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 240px; height: 159px; left: 80px; top: 171px;" data-block-id="d510f736c56760e8e93518a1aa9767f5"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="854" data-natural-height="564" data-lazy-loaded="" data-src="securing-windows-with-group-policy/a8eab9dbb76992a97854984c5450c9b3.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 165px; height: 115px; left: 395px; top: 203px;" data-block-id="000db932dd1829e7d16c0c87651f4b5e"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="165" data-natural-height="115" data-lazy-loaded="" data-src="securing-windows-with-group-policy/2c07557c8990f0569017eba4e9440225.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 146px; height: 157px; left: 127px; top: 443px;" data-block-id="bb2e2ef4a62a72498450e63b2c977f23"><div class="sl-block-content" style="z-index: 14;"><img style="" data-natural-width="292" data-natural-height="313" data-lazy-loaded="" data-src="securing-windows-with-group-policy/afb228cb6358c4264823a79b8e86dcdc.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 200px; height: 203px; left: 400px; top: 420px;" data-block-id="bf258d035cdcbc86880f10ecc310868f"><div class="sl-block-content" style="z-index: 15;"><img style="" data-natural-width="200" data-natural-height="203" data-lazy-loaded="" data-src="securing-windows-with-group-policy/1f79c3b14fd5a592609845243a239d26.jpg"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 240px; height: 222px; left: 640px; top: 408px;" data-block-id="41399b30de73f73a4bfaee2d7fcb5cde"><div class="sl-block-content" style="z-index: 16;"><img style="" data-natural-width="347" data-natural-height="321" data-lazy-loaded="" data-src="securing-windows-with-group-policy/0033372528cb1464117faeefed93c315.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 226px; height: 221px; left: 654px; top: 140px;" data-block-id="7b4700e52e8b644dbf9cc2fd8f4ce516"><div class="sl-block-content" style="z-index: 17;"><img style="" data-natural-width="401" data-natural-height="393" data-lazy-loaded="" data-src="securing-windows-with-group-policy/7f77a6e841b1a90efbf627732c46e59e.png"></div></div></section><section data-id="949da6bb66ab84e898d432f448062bce"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 78px; height: auto;" data-block-id="47e1756d4e9e65fb6eb7424ecc2bba52"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h1 style="text-align:left">
+<strong>DEP: </strong>Data Execution Prevention</h1>
+
+<p> </p>
+
+<h1 style="text-align:left">SEHOP: Structured Exception Handler Overwrite Protection</h1>
+
+<p> </p>
+
+<h1 style="text-align:left">ASLR: Address Space Layout Randomization</h1>
+</div></div></section><section data-id="fb09a403774bf64aac577aa55d188e33">
+<div class="sl-block" data-block-type="image" style="width: 685px; height: 633px; left: 138px; top: 34px;" data-block-id="ec7459d12f70be0fd0af6c9f0a50ec25"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="685" data-natural-height="633" data-lazy-loaded="" data-src="securing-windows-with-group-policy/0ea39889c75f270bf6dcca1fcc18b078.png"></div></div></section><section data-id="110af938d6fb215d187f2d8a5c560343"><div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 332px;" data-block-id="5fee81409ca8d3bdb57041e0734c40df"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;"><p>Text</p></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 960px; height: 503px; left: 0px; top: 99px;" data-block-id="8a41758113935908b5b2e0eb0c77ff16"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="2412" data-natural-height="1264" data-lazy-loaded="" data-src="securing-windows-with-group-policy/7987a0117fc27d2255036344245dc04d.png"></div></div></section></section><section class="stack" data-id="d8e391e47bf88a4e574c2f1ba41be08a"><section data-id="06e4c3504b8ce2d3740279619c54a49d"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 70px; height: auto;" data-block-id="15c854a3b7df2d33411328680ff1b853"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;" dir="ui">
+<h1>scripting</h1>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 771px; height: 555px; left: 95px; top: 143px;" data-block-id="bd3439c21de55a02bce42014e2f5c8c2"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="771" data-natural-height="555" data-lazy-loaded="" data-src="securing-windows-with-group-policy/0a99372b5337ed26a5e296e944fa119c.png"></div></div></section><section data-id="224193cc6f24d633348f784b4363697e"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 50px; height: auto;" data-block-id="73ccfa5110754a78d672e55e10736e93"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;">
+<h2>Powershell</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 140px; height: auto;" data-block-id="df8a8346d403577ed8e886fea9011278"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<ul>
+	<li>Enable ALL THE logging</li>
+	<li>Lockdown which IPs can use WMI</li>
+	<li>Digitally Sign your scripts</li>
+	<li>Use Immediate Scheduled Tasks</li>
+</ul>
+
+<p> </p>
+
+<p>IF YOU CAN:</p>
+
+<ul>
+	<li>Use JEA (Just Enough Administration)</li>
+	<li>Use AppLocker (ContrainedLanguage Mode)</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 806px; height: 131px; left: 77px; top: 499px;" data-block-id="2006efba30037b89c9025aab9389bd3e"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="1418" data-natural-height="230" data-lazy-loaded="" data-src="securing-windows-with-group-policy/2c8fb658e9c5f626f6343a89f6f0f1db.png"></div></div></section><section data-id="29b79fb54c7c27359561a656a9e4f903"><div class="sl-block" data-block-type="text" style="width: 573px; left: 194px; top: 29px; height: auto;" data-block-id="5b7794161d870836112d16fd504a2b90"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 10;">
+<h2>powershell lockdown policy</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 960px; height: 599px; left: 0px; top: 101px;" data-block-id="e49e21877aed92ce17a56656de0650f2"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1638" data-natural-height="1022" data-lazy-loaded="" data-src="securing-windows-with-group-policy/eca542ae82afda5d969b75bd9fb529fb.png"></div></div></section></section><section class="stack" data-id="28d21cfd7683c93f4a9af2c3b69068b7"><section data-id="9d9aceafff7fbaf0295b09ef4802cfa7"><div class="sl-block" data-block-type="text" style="width: 806px; left: 80px; top: 70px; height: auto;" data-block-id="053f0146a0b5707165914c0e1d2e34b8"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>applocker</h1>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 606px; height: 472px; left: 180px; top: 210px;" data-block-id="f541bf5b88d0d2386e0aaf9de79f288c"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="606" data-natural-height="472" data-lazy-loaded="" data-src="securing-windows-with-group-policy/a13064913ba9cbb2530ab194f1a96238.png"></div></div></section><section data-id="02c06699c274635a8e3f27f2fb1e40a3"><div class="sl-block" data-block-type="text" style="width: 413px; left: 29px; top: 84px; height: auto;" data-block-id="f1529508ffab5947053eef0ea4cf49cd"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 10;">
+<h2>not so scary</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 413px; left: 29px; top: 140px; height: auto;" data-block-id="0163e4d5c788db489338a9a0af97293e"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec metus justo. Aliquam erat volutpat." style="z-index: 12; text-align: left;">
+<p>EXEs, DLLs, Scripts, MSIs, APPXs</p>
+
+<p> </p>
+
+<p> </p>
+
+<p>Three different conditions can be use</p>
+
+<ul>
+	<li>Hash Condition Rules</li>
+	<li>Path Condition Rules</li>
+	<li>Publisher Condition Rules</li>
+</ul>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<p><span style="color:#FF0000"><strong>BLOCK</strong></span> rules always trump <span style="color:#FF0000"><strong>ALLOW</strong></span> rules</p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 417px; height: 700px; left: 480px; top: 0px;" data-block-id="b92b7081b8940d5ece214eee00c5c75f"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="672" data-natural-height="1128" data-lazy-loaded="" data-src="securing-windows-with-group-policy/99a859c125162ee468a60a6fcce7c737.png"></div></div></section><section data-id="f56203681192a7c3ef74ebf8ed64a672"><div class="sl-block" data-block-type="text" style="width: 308px; left: 35px; top: 70px; height: auto;" data-block-id="c3db16ca06a235f6a8cab44fbd507bc4"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;">
+<h2>HAsh condition</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 498px; left: 35px; top: 210px; height: auto;" data-block-id="00bbfc781f1aa2109d89f71b2d78b320"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<ul>
+	<li>
+	<p>Every file has a unique hash value</p>
+	</li>
+	<li>
+	<p>Positive</p>
+
+	<ul>
+		<li>
+		<p>Unique hash for every executable</p>
+		</li>
+		<li>
+		<p>Secure!</p>
+		</li>
+	</ul>
+	</li>
+	<li>
+	<p>Negative</p>
+
+	<ul>
+		<li>
+		<p>Every update has a new hash</p>
+		</li>
+	</ul>
+	</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 470px; height: 700px; left: 490px; top: 0px;" data-block-id="bb6c986454e82498182bab44e6a6b961"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="504" data-natural-height="750" data-lazy-loaded="" data-src="securing-windows-with-group-policy/2d94a4ee95aa7a02b944e0197d8d411f.png"></div></div></section><section data-id="c6845b98297a025add23ee3ca450aeb8">
+<div class="sl-block" data-block-type="text" style="width: 413px; left: 499px; top: 84px; height: auto;" data-block-id="7fa128e45c9bb7d2a26a8c65bc471831"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 11;">
+<h2>PATH CONDITION</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 413px; left: 499px; top: 158px; height: auto;" data-block-id="2fe787f36db1f6e20b96725b804b8249"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec metus justo. Aliquam erat volutpat." style="z-index: 12; text-align: left;">
+<ul>
+	<li>Positive
+	<ul>
+		<li>Select an entire suite of products</li>
+		<li>You can use wildcards (*)</li>
+	</ul>
+	</li>
+	<li>Negative
+	<ul>
+		<li>You must know all paths the application uses</li>
+		<li>C:\ProgramData</li>
+		<li>C:\Users\username\AppData\Local\*\*.zip\*</li>
+	</ul>
+	</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 491px; height: 700px; left: 0px; top: 0px;" data-block-id="44ed679501f14d414948429f453f46e3"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="451" data-natural-height="643" data-lazy-loaded="" data-src="securing-windows-with-group-policy/2c92dd06c6cfb0e943e214365eb6c36f.png"></div></div></section><section data-id="3d4991bae8c5b02c2f5bb69538557c40"><div class="sl-block" data-block-type="text" style="width: 413px; left: 29px; top: 84px; height: auto;" data-block-id="141d629f6d7f84d312649c24721fb06b"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 10;">
+<h2>Publisher condition</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 413px; left: 29px; top: 140px; height: auto;" data-block-id="c8062cb5a6b3a1eaf1daea74ea6090f0"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec metus justo. Aliquam erat volutpat." style="z-index: 12; text-align: left;">
+<ul>
+	<li>Positive
+	<ul>
+		<li>Select an entire path to allow a suite of applications</li>
+		<li>You can use wildcards (*)</li>
+	</ul>
+	</li>
+	<li>Negative
+	<ul>
+		<li>Only works for applications that are digitally signed</li>
+	</ul>
+	</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 312px; height: 700px; left: 525px; top: 0px;" data-block-id="60884a0c81acd7f4c6b43e1794da03ce"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="500" data-natural-height="1122" data-lazy-loaded="" data-src="securing-windows-with-group-policy/ec6da210cc4ca754c0d32c78890e6da6.png"></div></div></section></section><section data-id="e9ae6ea6cd1aa4e08e69cac48956d1eb"><div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 960px; height: 692px; left: 0px; top: 4px;" data-block-id="1d4d169fdbe133cd1a9005d22a8a751a"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1874" data-natural-height="1350" data-lazy-loaded="" data-src="securing-windows-with-group-policy/fe5613bbc64d613a7e73e5d817b39b19.png"></div></div></section><section data-id="53dcd1d850fff625ff0e2a9b5e999d02"><div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 960px; height: 540px; left: 0px; top: 80px;" data-block-id="a343ff3c8ec66ce83ecc801e351a87ee"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1024" data-natural-height="576" data-lazy-loaded="" data-src="securing-windows-with-group-policy/a06a5105cff1ad0030e004b87e90f5eb.jpg"></div></div></section><section data-id="3e033eae127c3d1d618c178653e032e9"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 266px; height: auto;" data-block-id="e676b6122ef007afadce63b854274f57"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>thank you</h1>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 960px; height: 391px; left: 0px; top: 155px;" data-block-id="76c06e9dfc442690a51f160ff8bbd93a"><div class="sl-block-content" style="z-index: 12; transition-duration: 0.6s; transition-delay: 5s;" data-animation-type="fade-in"><img style="" data-natural-width="1352" data-natural-height="551" data-lazy-loaded="" data-src="securing-windows-with-group-policy/0771fb75ba1e22b766e98d16dd75c563.png"></div></div></section><section data-id="a385302aece98b8d0cff0bbd066f42eb"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 70px; height: auto;" data-block-id="b3ed5e7af26a8f3a106f30fe1a84c9a3"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>contact</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 194px;" data-block-id="65bcca123645d05757da332cd836bc8a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p style="font-size:1.3em; text-align:left"><strong>email:</strong>    rickardja@live.com</p>
+
+<p style="font-size:1.3em; text-align:left"><strong>blog:</strong>      https://msadministrator.com</p>
+
+<p style="font-size:1.3em; text-align:left"><strong>twitter:</strong> @MS_dministrator</p>
+
+<p style="font-size:1.3em; text-align:left"><strong>github:</strong>  https://github.com/MSAdministrator</p>
+
+<p style="font-size:1.3em; text-align:left"> </p>
+
+<p style="font-size:1.3em; text-align:left"><strong>slides:</strong> </p>
+
+<p style="font-size:1.3em; text-align:left"><span>https://msadministrator.github.io/presentations/securing-windows-with-group-policy.html</span></p>
+</div></div></section>
+			</div>
+		</div>
+
+		<script>
+			var SLConfig = {"deck": {"id":1070368,"slug":"securing-windows-with-group-policy","title":"Securing Windows with Group Policy","description":"Securing Windows with Group Policy is a presentation by Josh Rickard (@MS_dministrator) for DerbyCon 2017.","width":960,"height":700,"visibility":"self","published_at":null,"sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/6503a12842f03fab0aa00f96294deaaf/thumb.jpg?54842663","view_count":0,"user":{"id":751485,"username":"msadministrator","name":null,"description":null,"thumbnail_url":"https://www.gravatar.com/avatar/a3cab24cca7ccf6c969a9161fa1405ef?s=140\u0026d=https%3A%2F%2Fs3.amazonaws.com%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","paid":true,"pro":false,"lite":true,"team_id":null,"settings":{"id":601912,"present_controls":true,"present_upsizing":true,"present_pointer":false,"present_notes":true}},"background_transition":"slide","transition":"slide","theme_id":null,"theme_font":"overpass2","theme_color":"silver-blue","auto_slide_interval":0,"comments_enabled":true,"forking_enabled":false,"rolling_links":false,"center":false,"should_loop":false,"share_notes":false,"slide_number":false,"rtl":false,"version":2,"collaborative":null,"deck_user_editor_limit":1,"data_updated_at":1506381661280,"font_typekit":null,"font_google":null,"notes":{"9e278e509838508645d980d3baa15694":"https://www.carbonblack.com/2017/06/28/carbon-black-threat-research-technical-analysis-petya-notpetya-ransomware/","110af938d6fb215d187f2d8a5c560343":"DEP: Data Execution Prevention - Security feature which prevents the execution of code in pages of memory that are not explicitly marked as executable.\n\nASLR: Address Space Layout Randomization - Enabled in memory randomization for process runspaces to make it more difficult for exploits that rely on static/set memory locations.\n\nSEHOP: Structured Exception Handler Overwrite Protection - Aims to thwart stack-based buffer overflow exploits.","fb0255325ea94a15bb6af62f17f621c4":"Run whether user is logged on or not: all depends on what you are trying to do. If running a PowerShell script, then select this option\n\nDo not store password: When selected, the password is never stored on the machine and the machine is granted a one-time use SAT (Security Access Token) which cannot be delegated.\n\nRun with highest privileges: Typically if running PowerShell you will need this.\n\n","7796dfbd2893b7184b7902dc281eeada":"Now, lets say that a malicious user has infected a machine and lures an IT person to go over to the machine and login with their elevated credentials.  The attacker could just create a login script to create and add a new account into the Domain Admins group, if the IT Admin credentials are part of an elevated rights group.\n\nWith Restricted Groups, it will then, the next time GP refreshes, remove that user from the group.\n","949da6bb66ab84e898d432f448062bce":"DEP: Data Execution Prevention - Security feature which prevents the execution of code in pages of memory that are not explicitly marked as executable.\n\nASLR: Address Space Layout Randomization - Enabled in memory randomization for process runspaces to make it more difficult for exploits that rely on static/set memory locations.\n\nSEHOP: Structured Exception Handler Overwrite Protection - Aims to thwart stack-based buffer overflow exploits."}}};
+
+
+			// Use local fonts
+			SLConfig.fonts_url = 'lib/fonts/';
+		</script>
+
+		<script src="lib/head.min.js"></script>
+		<script src="lib/reveal.min.js"></script>
+		<script src="lib/offline.js"></script>
+
+		<!-- Initialize the presentation -->
+		<script>
+			Reveal.initialize({
+				width: 960,
+				height: 700,
+				margin: 0.05,
+
+				controls: true,
+				progress: true,
+				history: true,
+				mouseWheel: false,
+				showNotes: false,
+				slideNumber: false,
+
+				autoSlide: 0 || 0,
+				autoSlideStoppable: true,
+
+				center: false,
+				loop: false,
+				rtl: false,
+
+				transition: "slide",
+				backgroundTransition: "slide",
+
+				dependencies: [
+					{ src: 'lib/reveal-plugins/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'lib/reveal-plugins/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'lib/reveal-plugins/highlight/highlight.js', async: true, callback: function() { hljs.initHighlighting(); hljs.initHighlightingOnLoad(); } },
+					{ src: 'lib/reveal-plugins/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+		</script>
+
+		
+
+	</body>
+</html>
